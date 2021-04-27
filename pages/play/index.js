@@ -10,7 +10,7 @@ import {
   CharName,
   CharsContainer,
   ImgIcon,
-} from "./styles";
+} from "../../styles/pages/play";
 
 const fakeChars = [
   {
@@ -133,7 +133,7 @@ const GameView = () => {
         focusable="false"
         data-prefix="fas"
         data-icon="portrait"
-        class="svg-inline--fa fa-portrait fa-w-12"
+        className="svg-inline--fa fa-portrait fa-w-12"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 384 512"
