@@ -1,65 +1,189 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React, { useEffect, useState } from "react";
 
-export default function Home() {
+import uuid from "react-uuid";
+
+import {
+  Container,
+  Header,
+  CharItem,
+  CharImg,
+  CharName,
+  CharsContainer,
+  ImgIcon,
+} from "./styles";
+
+const fakeChars = [
+  {
+    id: uuid(),
+    name: "Ayanokoji Kyiotaka",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+  {
+    id: uuid(),
+    name: "Naruto Hatake",
+    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
+  },
+];
+const GameView = () => {
+  const [chars, setChars] = useState([]);
+
+  useEffect(() => {
+    setChars(fakeChars);
+  }, []);
+
+  const ImageIcon = () => (
+    <ImgIcon onClick={() => alert("should show my character")}>
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="portrait"
+        class="svg-inline--fa fa-portrait fa-w-12"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 384 512"
+      >
+        <path
+          fill="currentColor"
+          d="M336 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM192 128c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H102.4C90 384 80 375.4 80 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z"
+        ></path>
+      </svg>
+    </ImgIcon>
+  );
+
+  const handleSelectChar = (char) => {
+    const newChars = chars.map((item) => {
+      if (item.id === char.id) {
+        return {
+          ...item,
+          checked: !char?.checked,
+        };
+      }
+
+      return item;
+    });
+
+    console.log("new chars ->", newChars);
+
+    setChars(newChars);
+  };
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container>
+      <Header>
+        <h2>Você é o: Naruto Hatake</h2>
+        <ImageIcon />
+      </Header>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <CharsContainer>
+        {chars.length &&
+          chars.map((char) => (
+            <CharItem
+              checked={char.checked}
+              onClick={() => handleSelectChar(char)}
+              key={char.id}
+            >
+              <CharImg src={char.imgSrc} alt={char.name} />
+              <CharName checked={char.checked}>{char.name}</CharName>
+            </CharItem>
+          ))}
+      </CharsContainer>
+    </Container>
+  );
+};
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+export default GameView;
