@@ -12,118 +12,22 @@ import {
   ImgIcon,
 } from "../../styles/pages/play";
 
-const fakeChars = [
-  {
-    id: uuid(),
-    name: "Ayanokoji Kyiotaka",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-  {
-    id: uuid(),
-    name: "Naruto Hatake",
-    imgSrc: "https://cdn.myanimelist.net/images/characters/12/61330.webp",
-  },
-];
+import fakeChars from "../../anime-chars.json";
+
 const GameView = () => {
   const [chars, setChars] = useState([]);
 
   useEffect(() => {
-    setChars(fakeChars);
+    console.log(fakeChars);
+
+    const parsedChars = fakeChars.chars.map((char) => {
+      return {
+        ...char,
+        id: uuid(),
+      };
+    });
+
+    setChars(parsedChars);
   }, []);
 
   const ImageIcon = () => (
