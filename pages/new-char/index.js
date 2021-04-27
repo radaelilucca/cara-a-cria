@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 import {
   Container,
@@ -58,11 +58,13 @@ const CreateView = () => {
   const handleSelectChange = async (newValue) => {
     const newCategory = newValue[newValue.length - 1];
 
+    const categoryId = uuid();
+
     setFormData((prev) => ({ ...formData, categories: newValue }));
 
     if (
       !newCategory ||
-      categories.some((item) => item.value === newCategory.value)
+      categories.find((item) => item.value === newCategory.value)
     ) {
       return;
     }
@@ -72,6 +74,7 @@ const CreateView = () => {
     await categoriesRef.add({
       label,
       value,
+      id: categoryId,
       createdAt: firebase.firestore.FieldValue.serverTimestamp(),
     });
   };
@@ -94,19 +97,31 @@ const CreateView = () => {
         throw new Error("This char already exists");
       }
 
-      await charactersRef.add({
+      console.log({
         id: uuid(),
         name: formData.name,
         imageSrc: formData.imageSrc,
-        categories: formData.categories,
+        categories: formData.categories.map((item) => item.id),
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       });
+
+      // await charactersRef.add({
+      //   id: uuid(),
+      //   name: formData.name,
+      //   imageSrc: formData.imageSrc,
+      //   categories: formData.categories,
+      //   createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      // });
 
       setFormData({
         name: "",
         imageSrc: "",
         categories: [],
       });
+
+      if (nameInputRef.current) {
+        nameInputRef.current.focus();
+      }
     } catch (error) {
       alert(error);
       setFormData({
@@ -117,11 +132,11 @@ const CreateView = () => {
     }
   };
 
+  const nameInputRef = useRef(null);
+
   const handleImportFromJson = async () => {
-    console.log("create called");
     const { chars } = jsonChars;
 
-    console.log("characters ->", characters);
     chars.forEach(async (char) => {
       const exists = characters?.find(
         (item) => item.name?.toLowerCase() === char.name?.toLowerCase()
@@ -129,7 +144,6 @@ const CreateView = () => {
 
       if (!exists) {
         try {
-          console.log("crete char ->", char.name);
           await charactersRef.add({
             id: uuid(),
             name: char.name,
@@ -160,6 +174,9 @@ const CreateView = () => {
           onChange={handleInputChange}
           value={formData.name}
           required
+          autoComplete={false}
+          autoFocus
+          ref={nameInputRef}
         />
 
         <Label>Image Link (SRC)</Label>
@@ -169,6 +186,7 @@ const CreateView = () => {
           value={formData.imageSrc}
           onChange={handleInputChange}
           required
+          autoComplete={false}
         />
 
         <Label>Categories</Label>

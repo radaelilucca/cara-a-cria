@@ -108,6 +108,7 @@ export const CharItem = styled.button`
 export const CharImg = styled.img`
   border-radius: 16px;
   height: 135px;
+  max-width: 120px;
 
   @media (min-width: 764px) {
     height: 155px;

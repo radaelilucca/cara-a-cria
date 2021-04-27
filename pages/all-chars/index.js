@@ -40,7 +40,7 @@ const CharsView = () => {
   const firestore = firebase.firestore();
 
   const charactersRef = firestore.collection("characters");
-  const query = charactersRef.orderBy("createdAt", "desc");
+  const query = charactersRef.orderBy("createdAt", "desc").limit(10);
 
   const [characters] = useCollectionData(query);
 
