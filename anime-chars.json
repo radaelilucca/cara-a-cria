@@ -1,264 +1,1718 @@
 {
-  "chars": [
-    {
-      "name": "HAWK",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/2/255451.jpg"
-    },
-    {
-      "name": "DIANE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/9/273829.jpg"
-    },
-    {
-      "name": "GOWTHER",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/3/277118.jpg"
-    },
-    {
-      "name": "GOWTHER2",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/3/277118.jpg"
-    },
-    {
-      "name": "ELIZABETH LIONES",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/255449.jpg"
-    },
-    {
-      "name": "MERLIN",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/6/277480.jpg"
-    },
-    {
-      "name": "ELAINE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/277012.jpg"
-    },
-    {
-      "name": "GILTHUNDER",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/277509.jpg"
-    },
-    {
-      "name": "DABI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/366578.jpg"
-    },
-    {
-      "name": "TWICE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/362860.jpg"
-    },
-    {
-      "name": "HAWKS",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/408739.jpg"
-    },
-    {
-      "name": "ENDEAVOR",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/4/414269.jpg"
-    },
-    {
-      "name": "GRAN TORINO",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/13/334187.jpg"
-    },
-    {
-      "name": "SIR NIGHTEYE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/337521.jpg"
-    },
-    {
-      "name": "MIRIO TOGATA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/15/349440.jpg"
-    },
-    {
-      "name": "TAMAKI AMAJIKI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/409263.jpg"
-    },
-    {
-      "name": "NEJIRE HADOU",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/3/365145.jpg"
-    },
-    {
-      "name": "THIRTHEEN",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/15/333084.jpg"
-    },
-    {
-      "name": "GUNHEAD",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/16/333027.jpg"
-    },
-    {
-      "name": "ESCANOR",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/414084.jpg"
-    },
-    {
-      "name": "FRIESIA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/16/273677.jpg"
-    },
-    {
-      "name": "GUILA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/15/277017.jpg"
-    },
-    {
-      "name": "HELBRAM",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/277014.jpg"
-    },
-    {
-      "name": "JERICHO",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/273823.jpg"
-    },
-    {
-      "name": "ARTHUR PENDRAGON",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/7/277032.jpg"
-    },
-    {
-      "name": "SLADER",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/389729.jpg"
-    },
-    {
-      "name": "STAIN",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/15/331442.jpg"
-    },
-    {
-      "name": "OVERHAUL",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/7/363701.jpg"
-    },
-    {
-      "name": "MS JOKE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/359972.jpg"
-    },
-    {
-      "name": "BEST JEANIST",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/6/334175.jpg"
-    },
-    {
-      "name": "MEI HATSUME",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/4/329048.jpg"
-    },
-    {
-      "name": "MAGNE",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/13/362574.jpg"
-    },
-    {
-      "name": "SPINNER",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/16/340998.jpg"
-    },
-    {
-      "name": "KOUTA IZUMI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/7/350417.jpg"
-    },
-    {
-      "name": "HOUND DOG",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/6/410372.jpg"
-    },
-    {
-      "name": "EDGESHOT",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/340831.jpg"
-    },
-    {
-      "name": "KAMUI WOOD",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/9/301653.jpg"
-    },
-    {
-      "name": "YAMATO",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/8/128096.jpg"
-    },
-    {
-      "name": "MOONFISH",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/4/365142.jpg"
-    },
-    {
-      "name": "MUSCULAR",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/362580.jpg"
-    },
-    {
-      "name": "GANG ORCA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/13/360133.jpg"
-    },
-    {
-      "name": "MR COMPRESS",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/10/362578.jpg"
-    },
-    {
-      "name": "NANA SHIMURA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/4/361251.jpg"
-    },
-    {
-      "name": "RAGDOLL",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/9/350414.jpg"
-    },
-    {
-      "name": "MANDALAY",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/7/350413.jpg"
-    },
-    {
-      "name": "TOGA HIMIKO",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/2/420356.jpg"
-    },
-    {
-      "name": "PIXIE BOB",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/6/350415.jpg"
-    },
-    {
-      "name": "PRESENT MIC",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/16/301650.jpg"
-    },
-    {
-      "name": "NATSU DRAGNEEL",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/10/365282.jpg"
-    },
-    {
-      "name": "ERZA SCARLET AKA ELESIS",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/365289.jpg"
-    },
-    {
-      "name": "GRAY FULLBUSTER",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/278602.jpg"
-    },
-    {
-      "name": "LUCY HEARTFILIA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/7/67774.jpg"
-    },
-    {
-      "name": "HAPPY",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/365287.jpg"
-    },
-    {
-      "name": "WENDY MARVELL",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/365291.jpg"
-    },
-    {
-      "name": "CHARLÉS",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/6/365290.jpg"
-    },
-    {
-      "name": "LAXUS DREYAR",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/15/294797.jpg"
-    },
-    {
-      "name": "JELLAL FERNANDES",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/80782.jpg"
-    },
-    {
-      "name": "MEGUMIN",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/349249.jpg"
-    },
-    {
-      "name": "ASUKA LANGLEY SOURYUU",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/12/79465.jpg"
-    },
-    {
-      "name": "REI AYANAMI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/11/314932.jpg"
-    },
-    {
-      "name": "MISATO KATSURAGI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/80156.webp"
-    },
-    {
-      "name": "SHINJI IKARI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/5/225177.jpg"
-    },
-    {
-      "name": "KAWORU NAGISA",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/10/155085.webp"
-    },
-    {
-      "name": "GEDOU IKARI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/14/396024.webp"
-    },
-    {
-      "name": "RITSUKO AKAGI",
-      "imgSrc": "https://cdn.myanimelist.net/images/characters/13/108139.jpg"
-    }
-  ]
+    "chars": [
+        {
+            "name": "",
+            "imgSrc": ""         
+        },
+
+        {
+            "name": "Naruto Hatake",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/253095.jpg"         
+        },
+        {
+            "name": "Naruto Hatake",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/253095.jpg"         
+        },
+        {
+            "name": "HAWK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/255451.jpg"         
+        },
+        {
+            "name": "DIANE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/273829.jpg"         
+        },
+        {
+            "name": "GOWTHER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/277118.jpg"         
+        },  
+        {
+            "name": "ELIZABETH LIONES",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/255449.jpg"         
+        },  
+        {
+            "name": "MERLIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/277480.jpg"         
+        },
+        {
+            "name": "ELAINE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/277012.jpg"         
+        },  
+        {
+            "name": "GILTHUNDER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/277509.jpg"         
+        }, 
+        {
+            "name": "DABI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/366578.jpg"         
+        }, 
+        {
+            "name": "TWICE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/362860.jpg"         
+        },  
+        {
+            "name": "HAWKS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/408739.jpg"         
+        },   
+        {
+            "name": "ENDEAVOR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/414269.jpg"         
+        },   
+        {
+            "name": "GRAN TORINO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/334187.jpg"         
+        },   
+        {
+            "name": "SIR NIGHTEYE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/337521.jpg"         
+        },  
+        {
+            "name": "MIRIO TOGATA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/349440.jpg"         
+        },   
+        {
+            "name": "TAMAKI AMAJIKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/409263.jpg"         
+        },   
+        {
+            "name": "NEJIRE HADOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/365145.jpg"         
+        },   
+        {
+            "name": "THIRTHEEN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/333084.jpg"         
+        },   
+        {
+            "name": "GUNHEAD",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/333027.jpg"         
+        },   
+        {
+            "name": "ESCANOR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/414084.jpg"         
+        },   
+        {
+            "name": "FRIESIA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/273677.jpg"         
+        },   
+        {
+            "name": "GUILA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/277017.jpg"         
+        },   
+        {
+            "name": "HELBRAM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/277014.jpg"         
+        },   
+        {
+            "name": "JERICHO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/273823.jpg"         
+        },   
+        {
+            "name": "ARTHUR PENDRAGON",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/277032.jpg"         
+        },   
+        {
+            "name": "SLADER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/389729.jpg"         
+        },   
+        {
+            "name": "STAIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/331442.jpg"         
+        },   
+        {
+            "name": "OVERHAUL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/363701.jpg"         
+        },   
+        {
+            "name": "MS JOKE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/359972.jpg"         
+        },   
+        {
+            "name": "BEST JEANIST",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/334175.jpg"         
+        },   
+        {
+            "name": "MEI HATSUME",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/329048.jpg"         
+        },   
+        {
+            "name": "MAGNE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/362574.jpg"         
+        },   
+        {
+            "name": "SPINNER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/340998.jpg"         
+        },   
+        {
+            "name": "KOUTA IZUMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/350417.jpg"         
+        },   
+        {
+            "name": "HOUND DOG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/410372.jpg"         
+        },   
+        {
+            "name": "EDGESHOT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/340831.jpg"         
+        },   
+        {
+            "name": "KAMUI WOOD",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/301653.jpg"         
+        },   
+        {
+            "name": "YAMATO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/128096.jpg"         
+        },   
+        {
+            "name": "MOONFISH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/365142.jpg"         
+        },   
+        {
+            "name": "MUSCULAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/362580.jpg"         
+        },   
+        {
+            "name": "GANG ORCA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/360133.jpg"         
+        },   
+        {
+            "name": "MR COMPRESS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/362578.jpg"         
+        },   
+        {
+            "name": "NANA SHIMURA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/361251.jpg"         
+        },   
+        {
+            "name": "RAGDOLL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/350414.jpg"         
+        },   
+        {
+            "name": "MANDALAY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/350413.jpg"         
+        },   
+        {
+            "name": "TOGA HIMIKO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/420356.jpg"         
+        },   
+        {
+            "name": "PIXIE BOB",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/350415.jpg"         
+        },   
+        {
+            "name": "PRESENT MIC",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/301650.jpg"         
+        },   
+        {
+            "name": "NATSU DRAGNEEL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/365282.jpg"         
+        },   
+        {
+            "name": "ERZA SCARLET AKA ELESIS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/365289.jpg"         
+        },   
+        {
+            "name": "GRAY FULLBUSTER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/278602.jpg"         
+        },   
+        {
+            "name": "LUCY HEARTFILIA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/67774.jpg"         
+        },   
+        {
+            "name": "HAPPY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/365287.jpg"         
+        },   
+        {
+            "name": "WENDY MARVELL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/365291.jpg"         
+        },   
+        {
+            "name": "CHARLÉS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/365290.jpg"         
+        },   
+        {
+            "name": "LAXUS DREYAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/294797.jpg"         
+        },   
+        {
+            "name": "JELLAL FERNANDES",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/80782.jpg"         
+        },   
+        {
+            "name": "MEGUMIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/349249.jpg"         
+        },   
+        {
+            "name": "ASUKA LANGLEY SOURYUU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/79465.jpg"         
+        },   
+        {
+            "name": "REI AYANAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/314932.jpg"         
+        },   
+        {
+            "name": "MISATO KATSURAGI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/80156.webp"         
+        },   
+        {
+            "name": "SHINJI IKARI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/225177.jpg"         
+        },   
+        {
+            "name": "KAWORU NAGISA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/155085.webp"         
+        },   
+        {
+            "name": "GEDOU IKARI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/396024.webp"         
+        },   
+        {
+            "name": "RITSUKO AKAGI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/108139.jpg"         
+        },   
+        {
+            "name": "PEN PEN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/346982.jpg"         
+        },   
+        {
+            "name": "KAJI RYOUJI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/60206.jpg"         
+        },  
+        {
+            "name": "RIKA TAKANASHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/257273.jpg"         
+        },   
+        {
+            "name": "MEI MISAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/237389.jpg"         
+        },   
+        {
+            "name": "DEATH THE KID",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/102169.jpg"         
+        },   
+        {
+            "name": "SOUL EATER EVANS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/75175.jpg"         
+        },   
+        {
+            "name": "BLACK STAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/28726.jpg"         
+        },   
+        {
+            "name": "MAKA ALBARN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/74151.jpg"         
+        },   
+        {
+            "name": "RAY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/360042.jpg"         
+        },   
+        {
+            "name": "NORMAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/360041.webp"         
+        },   
+        {
+            "name": "EMMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/360043.webp"         
+        },   
+        {
+            "name": "ISABELLA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/360045.webp"         
+        },   
+        {
+            "name": "SISTER KRONE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/360044.webp"         
+        },   
+        {
+            "name": "CONNY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/360049.jpg"         
+        },   
+        {
+            "name": "GILDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/360047.webp"         
+        },   
+        {
+            "name": "ANNA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/360050.jpg"         
+        },   
+        {
+            "name": "TERUNORI KUGA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/284898.webp"         
+        },   
+        {
+            "name": "HISAKO ARATO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/290070.jpg"         
+        },   
+        {
+            "name": "RINDO KOBAYASHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/292948.jpg"         
+        },   
+        {
+            "name": "NENE KINOKUNI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/316071.jpg"         
+        },   
+        {
+            "name": "SOUMA YUKIHIRA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/277503.jpg"         
+        },   
+        {
+            "name": "ERINA NAKIRI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/422450.jpg"         
+        },   
+        {
+            "name": "MEGUMI TADOKORO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/339622.jpg"         
+        },   
+        {
+            "name": "UMARU-CHAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/342819.webp"         
+        },   
+        {
+            "name": "NANA EBINA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/288276.jpg"         
+        },   
+        {
+            "name": "KIRIE MOTOBA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/287354.webp"         
+        },   
+        {
+            "name": "SYLPHINFORD TACHIBANA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/288275.jpg"         
+        },   
+        {
+            "name": "ALICE NAKIRI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/285712.jpg"         
+        },   
+        {
+            "name": "RYOU KUROKIBA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/286012.jpg"         
+        },   
+        {
+            "name": "IKUMI MITO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/298267.jpg"         
+        },   
+        {
+            "name": "ISAMI ALDINI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/286585.webp"         
+        },   
+        {
+            "name": "AKIRA HAYAMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/296599.webp"         
+        },   
+        {
+            "name": "SABER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/275276.jpg"         
+        },   
+        {
+            "name": "GILGAMESH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/338672.jpg"         
+        },   
+        {
+            "name": "IRISVIEL VON EINZBERN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/112996.webp"         
+        },   
+        {
+            "name": "ILLYASVIEL VON EINZBERN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/345110.webp"         
+        },   
+        {
+            "name": "RIN TOOSAKA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/89731.webp"         
+        },   
+        {
+            "name": "SAKURA MATOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/294277.jpg"         
+        },   
+        {
+            "name": "VIOLET EVERGARDEN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/345616.jpg"         
+        },   
+        {
+            "name": "ZERO TWO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/436454.webp"         
+        },   
+        {
+            "name": "RENJI ABARAI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/171877.jpg"         
+        }, 
+        {
+            "name": "ORIHIME INOUE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/97695.jpg"         
+        },   
+        {
+            "name": "URYUU ISHIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/33258.webp"         
+        },   
+        {
+            "name": "RUKIA KUCHIKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/348102.webp"         
+        },   
+        {
+            "name": "ICHIGO KUROSAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/171879.webp"         
+        },   
+        {
+            "name": "YASUTORA SADO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/102739.jpg"         
+        },   
+        {
+            "name": "SOUSUKE AIZEN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/85339.webp"         
+        },   
+        {
+            "name": "Aaroniero Arruruerie",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/40682.jpg"         
+        },   
+        {
+            "name": "ULQUIORRA CIFER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/72048.webp"         
+        },   
+        {
+            "name": "RIRUKA DOKUGAMINE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/139193.jpg"         
+        },   
+        {
+            "name": "FISHBONE D",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/103065.jpg"         
+        },   
+        {
+            "name": "GRAND FISHER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/103060.jpg"         
+        },   
+        {
+            "name": "NNOITRA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/104636.webp"         
+        },   
+        {
+            "name": "LILYNETTE GINGERBACK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/33324.jpg"         
+        },   
+        {
+            "name": "PESCHE GUATICHE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/79547.jpg"         
+        },   
+        {
+            "name": "Dondochakka Birstanne",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/79549.jpg"         
+        },   
+        {
+            "name": "TIA HARRIBEL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/118659.jpg"         
+        },   
+        {
+            "name": "YUKIO HANS VORARLBERNA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/173579.jpg"         
+        },   
+        {
+            "name": "MOMO HINAMORI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/33230.webp"         
+        },   
+        {
+            "name": "SHINJI HIRAKO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/72979.jpg"         
+        },   
+        {
+            "name": "SHUUHEI HISAGI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/76390.jpg"         
+        },   
+        {
+            "name": "TOSHIRO HITSUGAYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/36579.jpg"         
+        },   
+        {
+            "name": "HYOURINMARU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/65020.webp"         
+        },   
+        {
+            "name": "ICHIMARU GIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/30352.webp"         
+        },   
+        {
+            "name": "RYUUKEN ISHIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/141837.jpg"         
+        },   
+        {
+            "name": "GRIMMJOW JAEGERJAQUEZ",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/159977.jpg"         
+        },   
+        {
+            "name": "DON KANONJI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/50725.jpg"         
+        },   
+        {
+            "name": "KATEN KYOUKOTSU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/96960.jpg"         
+        },   
+        {
+            "name": "KAZESHINI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/63923.jpg"         
+        },   
+        {
+            "name": "IZURU KIRA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/33234.jpg"         
+        },   
+        {
+            "name": "CAPITÃO KOMAMURA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/59028.jpg"         
+        },   
+        {
+            "name": "KON",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/102740.jpg"         
+        },   
+        {
+            "name": "BYAKUYA KUCHIKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/31755.webp"         
+        },   
+        {
+            "name": "MASHIRO KUNA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/47226.webp"         
+        },   
+        {
+            "name": "KARIN KUROSAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/158885.jpg"         
+        },   
+        {
+            "name": "YUZU KUROSAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/33289.jpg"         
+        },   
+        {
+            "name": "ISSHIN KUROSAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/275597.webp"         
+        },   
+        {
+            "name": "MAYURI KUROTSUCHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/73295.jpg"         
+        },   
+        {
+            "name": "NEMU KUROTSUCHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/33239.jpg"         
+        },   
+        {
+            "name": "YACHIRU KUSAJISHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/85348.jpg"         
+        },   
+        {
+            "name": "CAPITÃO KYOURAKU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/33242.jpg"         
+        },   
+        {
+            "name": "ZOMMARI LEROUX",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/55944.jpg"         
+        },   
+        {
+            "name": "YAMMY LLARGO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/92015.jpg"         
+        },   
+        {
+            "name": "BARAGGAN LOUISENBAIRN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/51358.jpg"         
+        },   
+        {
+            "name": "IKKAKU MADARAME",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/33243.jpg"         
+        },   
+        {
+            "name": "WONDERWEISS MARGELA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/94486.jpg"         
+        },   
+        {
+            "name": "RANGIKU MATSUMOTO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/76902.webp"         
+        },   
+        {
+            "name": "KENSEI MUGURUMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/59964.webp"         
+        },   
+        {
+            "name": "MARECHIYO OOMAEDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/33244.jpg"         
+        },   
+        {
+            "name": "HIYORI SARUGAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/72982.jpg"         
+        },   
+        {
+            "name": "SENBONZAKURA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/114855.jpg"         
+        },   
+        {
+            "name": "KUUKAKU SHIBA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/33245.webp"         
+        },   
+        {
+            "name": "YORUICHI SHIHOUIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/302962.webp"         
+        },   
+        {
+            "name": "SODE NO SHIRAYUKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/71519.jpg"         
+        },   
+        {
+            "name": "SOI FON",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/76136.jpg"         
+        },   
+        {
+            "name": "COYOTE STARRK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/91750.jpg"         
+        },   
+        {
+            "name": "SUZUMEBACHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/68192.jpg"         
+        },   
+        {
+            "name": "CHOUJIRO SASAKIBE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/68554.jpg"         
+        },   
+        {
+            "name": "CIRUCCI THUNDERWITCH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/33248.jpg"         
+        },   
+        {
+            "name": "KANAME TOUSEN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/85062.webp"         
+        },   
+        {
+            "name": "JACKIE TRISTAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/158883.jpg"         
+        },   
+        {
+            "name": "TESSAI TSUKABISHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/40504.jpg"         
+        },   
+        {
+            "name": "SHUUKUROU TSUKISHIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/158887.webp"         
+        },   
+        {
+            "name": "URURU TSUMUGIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/40505.jpg"         
+        },   
+        {
+            "name": "NELLIEL TU ODERSCHVANK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/122507.jpg"         
+        },   
+        {
+            "name": "JUUSHIROU UKITAKE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/33251.jpg"         
+        },   
+        {
+            "name": "RETSU UNOHANA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/33252.jpg"         
+        },   
+        {
+            "name": "KISHUKE URAHARA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/149491.jpg"         
+        },   
+        {
+            "name": "HACHIGEN USHUODA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/94494.jpg"         
+        },   
+        {
+            "name": "LISA YADOUMARU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/40508.webp"         
+        },   
+        {
+            "name": "HANATARO YAMADA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/33253.webp"         
+        },   
+        {
+            "name": "COMANDANTE GENRYUUSAI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/33294.jpg"         
+        },   
+        {
+            "name": "ZANGETSU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/33260.jpg"         
+        },   
+        {
+            "name": "ZARAKI KENPACHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/150265.jpg"         
+        },   
+        {
+            "name": "RIMURU TEMPEST",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/317956.webp"         
+        },   
+        {
+            "name": "ASH KETCHUM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/100701.jpg"         
+        },   
+        {
+            "name": "PIKACHU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/289627.jpg"         
+        },   
+        {
+            "name": "BROCK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/364663.jpg"         
+        },   
+        {
+            "name": "MISTY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/104997.jpg"         
+        },   
+        {
+            "name": "TOGEPI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/183991.jpg"         
+        },   
+        {
+            "name": "JESSIE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/278096.jpg"         
+        },   
+        {
+            "name": "JAMES",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/101080.jpg"         
+        },   
+        {
+            "name": "MEWTWO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/196511.jpg"         
+        },   
+        {
+            "name": "MEOWTH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/131981.jpg"         
+        },   
+        {
+            "name": "ALICE BLACK RABBIT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/324294.jpg"         
+        },   
+        {
+            "name": "XERXES MAD HATTER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/345714.jpg"         
+        },   
+        {
+            "name": "GILBERT NIGHTRAY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/104015.jpg"         
+        },   
+        {
+            "name": "SHARON RAINSWORTH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/66120.jpg"         
+        },   
+        {
+            "name": "OZ VESSALIUS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/323973.jpg"         
+        },   
+        {
+            "name": "RUFUS BARMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/66122.jpg"         
+        },   
+        {
+            "name": "NOISE BASKERVILLE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/282530.jpg"         
+        },   
+        {
+            "name": "CHARLOTTE BASKERVILLE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/173079.jpg"         
+        },   
+        {
+            "name": "OSWALD BASKERVILLE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/72072.jpg"         
+        },   
+        {
+            "name": "CHESIRE CAT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/78186.jpg"         
+        },   
+        {
+            "name": "DOUG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/310020.jpg"         
+        },   
+        {
+            "name": "EMILY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/57056.jpg"         
+        },   
+        {
+            "name": "LEO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/112125.jpg"         
+        },   
+        {
+            "name": "REIM LUNETTES",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/112124.jpg"         
+        },   
+        {
+            "name": "FANG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/310019.jpg"         
+        },   
+        {
+            "name": "ELLIOT NIGHTRAY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/62937.jpg"         
+        },   
+        {
+            "name": "VINCENT NIGHTRAY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/112877.jpg"         
+        },   
+        {
+            "name": "JACK VESSALIUS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/307770.jpg"         
+        },   
+        {
+            "name": "ADA VESSALIUS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/100947.jpg"         
+        },   
+        {
+            "name": "OSCAR VESSALIUS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/112115.jpg"         
+        },   
+        {
+            "name": "WILL OF THE ABYSS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/78145.jpg"         
+        },   
+        {
+            "name": "KUUGO GINJOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/158879.jpg"         
+        },   
+        {
+            "name": "GIRIKO KUTSUZAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/136993.jpg"         
+        },   
+        {
+            "name": "OSAMU DAZAI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/313453.webp"         
+        },   
+        {
+            "name": "ATSUSHI NAKAJIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/303882.webp"         
+        },   
+        {
+            "name": "GIN AKUTAGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/307155.jpg"         
+        },   
+        {
+            "name": "RYUUNOSUKE AKUTAGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/301319.webp"         
+        },   
+        {
+            "name": "RANPO EDOGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/303819.jpg"         
+        },   
+        {
+            "name": "ELISE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/307252.jpg"         
+        },   
+        {
+            "name": "ERI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/437981.webp"         
+        },   
+        {
+            "name": "FRANCIS SCOTT KEY FITZGERALD",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/307249.jpg"         
+        },   
+        {
+            "name": "YUKICHI FUKUZAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/307242.jpg"         
+        },   
+        {
+            "name": "KIRANO HARUNO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/368476.jpg"         
+        },   
+        {
+            "name": "ICHIYOU HIGUCHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/307245.jpg"         
+        },   
+        {
+            "name": "KYOUKA IZUMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/306939.jpg"         
+        },   
+        {
+            "name": "DOPPO KUNIKIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/307237.jpg"         
+        },   
+        {
+            "name": "KENJI MIYAZAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/307239.jpg"         
+        },   
+        {
+            "name": "LUCY MAUD MONTGOMERY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/307250.jpg"         
+        },   
+        {
+            "name": "OUGAI MORI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/307248.jpg"         
+        },   
+        {
+            "name": "CHUUYA NAKAHARA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/305870.jpg"         
+        },   
+        {
+            "name": "KOUYOU OZAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/315812.jpg"         
+        },   
+        {
+            "name": "EDGAR ALLAN POE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/317491.jpg"         
+        },   
+        {
+            "name": "ARTHUR RIMBAUD",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/385197.jpg"         
+        },   
+        {
+            "name": "NAOMI TANIZAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/303968.jpg"         
+        },   
+        {
+            "name": "JUNICHIROU TANIZAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/303967.jpg"         
+        },   
+        {
+            "name": "AKIKO YOSANO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/303821.jpg"         
+        },   
+        {
+            "name": "Q",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/315959.jpg"         
+        },   
+        {
+            "name": "JOHN STEINBECK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/315811.jpg"         
+        },   
+        {
+            "name": "RINTAROU OKABE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/122643.jpg"         
+        },   
+        {
+            "name": "KURISU MAKISE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/114399.jpg"         
+        },   
+        {
+            "name": "MAYURI SHIINA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/131329.jpg"         
+        },   
+        {
+            "name": "ITARU HASHIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/148721.webp"         
+        },   
+        {
+            "name": "SHOUKO NISHIMIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/324712.webp"         
+        },   
+        {
+            "name": "SHOUYA ISHIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/337960.webp"         
+        },   
+        {
+            "name": "TOMOHIRO NAGATSUKA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/321588.webp"         
+        },   
+        {
+            "name": "PEDRO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/330357.jpg"         
+        },   
+        {
+            "name": "HAKU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/39353.jpg"         
+        },   
+        {
+            "name": "CHIHIRO OGINO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/39349.jpg"         
+        },   
+        {
+            "name": "NO FACE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/64987.jpg"         
+        },   
+        {
+            "name": "YUBABA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/64983.jpg"         
+        },   
+        {
+            "name": "MEGUMI FUSHIGURO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/435407.webp"         
+        },   
+        {
+            "name": "SATORU GOJOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/426446.jpg"         
+        },   
+        {
+            "name": "YUUJI ITADORI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/432953.webp"         
+        },   
+        {
+            "name": "NOBARA KUGISAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/422344.webp"         
+        },   
+        {
+            "name": "CHOUSOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/436205.jpg"         
+        },   
+        {
+            "name": "ESOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/436204.jpg"         
+        },   
+        {
+            "name": "YOSHINOBU GAKUGANJI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/432951.jpg"         
+        },   
+        {
+            "name": "SUGURU GETOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/427138.webp"         
+        },   
+        {
+            "name": "HANAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/414242.jpg"         
+        },   
+        {
+            "name": "KIYOTAKA IJICHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/435400.jpg"         
+        },   
+        {
+            "name": "TOGE INUMAKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/423745.webp"         
+        },   
+        {
+            "name": "UTAHIME IORI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/429465.webp"         
+        },   
+        {
+            "name": "JOUGO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/436208.webp"         
+        },   
+        {
+            "name": "NORITOSHI KAMO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/430935.webp"         
+        },   
+        {
+            "name": "MAHITO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/430334.jpg"         
+        },   
+        {
+            "name": "MEI MEI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/435405.jpg"         
+        },   
+        {
+            "name": "MIWA INÚTIL",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/431905.jpg"         
+        },   
+        {
+            "name": "KENTO NANAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/427139.jpg"         
+        },   
+         {
+            "name": "MOMO NISHIMIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/435453.jpg"         
+        },   
+        {
+            "name": "PANDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/423950.jpg"         
+        },   
+        {
+            "name": "HARUTA SHIGEMO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/435673.jpg"         
+        },   
+        {
+            "name": "AOI TOUDOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/430333.webp"         
+        },   
+        {
+            "name": "MASAMICHI YAGA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/431153.jpg"         
+        },   
+        {
+            "name": "JUNPEI YOSHINO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/434571.jpg"         
+        },   
+        {
+            "name": "MAKI ZENIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/423949.jpg"         
+        },   
+        {
+            "name": "MAI ZENIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/430336.jpg"         
+        },   
+        {
+            "name": "KAORI MIYAZONO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/353338.webp"         
+        },   
+        {
+            "name": "KOUSEI ARIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/281560.webp"         
+        },   
+         {
+            "name": "TSUBAKI SAWABE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/353335.webp"         
+        }, 
+        {
+            "name": "RYOUTA WATARI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/353336.webp"         
+        },   
+        {
+            "name": "KOHARU SETO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/276134.jpg"         
+        },   
+        {
+            "name": "TAKESHI AIZA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/277324.webp"         
+        },   
+        {
+            "name": "SAKI ARIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/275905.jpg"         
+        },   
+        {
+            "name": "MORGIANA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/304409.webp"         
+        },   
+        {
+            "name": "ALIBABA SALUJA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/171933.jpg"         
+        },   
+        {
+            "name": "ALADDIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/186851.jpg"         
+        },   
+        {
+            "name": "SINBAD",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/239511.webp"         
+        },   
+        {
+            "name": "JAFAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/181339.jpg"         
+        },   
+        {
+            "name": "KOUHA REN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/200847.jpg"         
+        },   
+        {
+            "name": "JUDAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/254255.webp"         
+        },   
+        {
+            "name": "CHIKA FUJIWARA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/404483.webp"         
+        },   
+        {
+            "name": "KAGUYA SHINOMIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/371540.jpg"         
+        },   
+        {
+            "name": "YUU ISHIGAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/378819.webp"         
+        },   
+        {
+            "name": "MIYUKI SHIROGANE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/436314.webp"         
+        },   
+        {
+            "name": "AI HAYASAKA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/378821.jpg"         
+        },   
+        {
+            "name": "KEI SHIROGANE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/376606.webp"         
+        },   
+        {
+            "name": "NAGISA KASHIWAGI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/384774.jpg"         
+        },   
+        {
+            "name": "ERIKA KOSE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/411792.jpg"         
+        },   
+        {
+            "name": "MONONOKE HIME",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/198811.jpg"         
+        },   
+        {
+            "name": "MORO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/395789.jpg"         
+        },   
+        {
+            "name": "THE FOREST SPIRIT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/64975.jpg"         
+        },   
+        {
+            "name": "FUSHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/414023.webp"         
+        },   
+        {
+            "name": "MARCH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/409837.jpg"         
+        },   
+        {
+            "name": "JOAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/330757.jpg"         
+        },   
+        {
+            "name": "HAYASE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/414018.jpg"         
+        },   
+        {
+            "name": "PARONA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/414021.webp"         
+        },   
+        {
+            "name": "SHOUYOU HINATA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/311914.webp"         
+        },   
+        {
+            "name": "TOBIO KAGEYAMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/417874.jpg"         
+        },   
+        {
+            "name": "TAKANOBU AONE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/260015.webp"         
+        },   
+        {
+            "name": "ASAHI AZUMANE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/250885.webp"         
+        },   
+        {
+            "name": "KOUTAROU BOKUTO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/417878.jpg"         
+        },   
+        {
+            "name": "TSUTOMU GOSHIKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/314056.webp"         
+        },   
+        {
+            "name": "KANJI KOGANEGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/301775.webp"         
+        },   
+        {
+            "name": "SHINSUKE KITA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/417870.jpg"         
+        },   
+        {
+            "name": "KENMA KOZUME",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/417885.jpg"         
+        },   
+        {
+            "name": "AKIRA KUNIMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/245981.webp"         
+        },   
+        {
+            "name": "TETSUROU KUROO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/417887.jpg"         
+        },   
+        {
+            "name": "OSAMU MIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/417867.jpg"         
+        },   
+        {
+            "name": "ATSUMU MIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/417868.jpg"         
+        },   
+        {
+            "name": "YUU NISHINOYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/250907.webp"         
+        },   
+        {
+            "name": "DAICHI SAWAMURA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/417864.jpg"         
+        },   
+        {
+            "name": "EITA SEMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/315377.jpg"         
+        },   
+        {
+            "name": "KIYOKO SHIMIZU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/245943.jpg"         
+        },   
+        {
+            "name": "KOUSHI SUGAWARA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/417862.webp"         
+        },   
+        {
+            "name": "TAKEDA SENSEI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/417855.jpg"         
+        },   
+        {
+            "name": "RYUUNOSUKE TANAKA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/417860.jpg"         
+        },   
+        {
+            "name": "SATORI TENDOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/315378.webp"         
+        },   
+        {
+            "name": "KEI TSUKISHIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/417859.jpg"         
+        },   
+        {
+            "name": "COACH UKAI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/254187.jpg"         
+        },   
+        {
+            "name": "WAKATOSHI USHIJIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/437510.webp"         
+        },   
+        {
+            "name": "HITOKA YACHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/345715.jpg"         
+        },   
+        {
+            "name": "TADASHI YAMAGUCHI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/417857.jpg"         
+        },   
+        {
+            "name": "SOPHIE HATTER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/71381.webp"         
+        },   
+        {
+            "name": "HOWL PENDRAGON",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/83512.jpg"         
+        },   
+        {
+            "name": "CALCIFER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/64076.jpg"         
+        },   
+        {
+            "name": "CABEÇA DE NABO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/48656.jpg"         
+        },   
+        {
+            "name": "BRUXA DAS TERRAS ABANDONADAS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/64074.jpg"         
+        },   
+        {
+            "name": "SAKUTA AZUSAGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/367080.webp"         
+        },   
+        {
+            "name": "MAI SAKURAJIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/284324.webp"         
+        },   
+        {
+            "name": "KAEDE AZUSAGAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/361765.jpg"         
+        },   
+        {
+            "name": "RIO FUTABA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/361763.jpg"         
+        },   
+        {
+            "name": "GIORNO GIOVANNA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/361193.jpg"         
+        },   
+        {
+            "name": "BRUNO BUCCIARATI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/361191.webp"         
+        },   
+        {
+            "name": "NARANCIA GHIRGA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/371115.webp"         
+        },   
+        {
+            "name": "JOUTAROU KUUJOU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/312302.jpg"         
+        },   
+        {
+            "name": "DIO BRANDO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/328191.webp"         
+        },   
+        {
+            "name": "JOJO JOESTAR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/182715.jpg"         
+        },   
+        {
+            "name": "TORNADO DO TERROR",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/379084.webp"         
+        },   
+        {
+            "name": "ROBIN NICO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/136773.jpg"         
+        },   
+        {
+            "name": "USOPP",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/188076.jpg"         
+        },   
+        {
+            "name": "BROOK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/161005.jpg"         
+        },   
+        {
+            "name": "MONKEY D LUFFY",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/310307.jpg"         
+        },   
+        {
+            "name": "RORONOA ZORO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/100534.jpg"         
+        },   
+        {
+            "name": "SANJI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/136769.jpg"         
+        },   
+        {
+            "name": "NAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/263249.jpg"         
+        },   
+        {
+            "name": "TONY TONY CHOPPER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/100536.jpg"         
+        },   
+        {
+            "name": "DOFLAMINGO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/349513.jpg"         
+        },   
+        {
+            "name": "MIKASA ACKERMAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/358414.webp"         
+        },   
+        {
+            "name": "LEVI ACKERMAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/321544.webp"         
+        },   
+        {
+            "name": "ARMIN ARLET",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/413051.webp"         
+        },   
+        {
+            "name": "EREN YEAGER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/216895.jpg"         
+        },   
+        {
+            "name": "KENNY ACKERMAN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/364347.jpg"         
+        },   
+        {
+            "name": "REINER BRAUN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/206489.jpg"         
+        },   
+        {
+            "name": "TITÃ CARROÇA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/385131.jpg"         
+        },   
+        {
+            "name": "JEAN KIRSTEIN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/204115.webp"         
+        },   
+        {
+            "name": "ANNIE LEONHART",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/206357.jpg"         
+        },   
+        {
+            "name": "ERWIN SMITH",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/206431.jpg"         
+        },   
+        {
+            "name": "CONNIE SPRINGER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/208109.jpg"         
+        },   
+        {
+            "name": "ZOE HANGE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/208637.jpg"         
+        },   
+        {
+            "name": "ZEKE YEAGER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/384699.jpg"         
+        },   
+        {
+            "name": "TITÃ BESTIAL AKA MAMACO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/328280.jpg"         
+        },   
+        {
+            "name": "CARLA YEAGER",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/206411.jpg"         
+        },   
+        {
+            "name": "SAITAMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/294388.jpg"         
+        },   
+        {
+            "name": "GENOS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/297329.jpg"         
+        },   
+        {
+            "name": "SPEED-O-SOUND-SONIC",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/294250.jpg"         
+        },   
+        {
+            "name": "L LAWLIET",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/249647.jpg"         
+        },   
+        {
+            "name": "LIGHT YAGAMI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/6/63870.jpg"         
+        },   
+        {
+            "name": "RYUK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/59125.jpg"         
+        },   
+        {
+            "name": "MISA AMANE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/30971.jpg"         
+        },   
+        {
+            "name": "REM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/28562.jpg"         
+        },   
+        {
+            "name": "EMILIA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/302100.webp"         
+        },   
+        {
+            "name": "SUBARU NATSUKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/315153.jpg"         
+        },   
+        {
+            "name": "REM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/311627.webp"         
+        },   
+        {
+            "name": "RAM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/325034.webp"         
+        },   
+        {
+            "name": "PACK",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/303059.webp"         
+        },   
+        {
+            "name": "BEATRICE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/315230.jpg"         
+        },   
+        {
+            "name": "FELT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/308605.webp"         
+        },   
+        {
+            "name": "REINHARD VAN ASTREA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/303061.jpg"         
+        },   
+        {
+            "name": "ROSWAAL L MATHERS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/268225.jpg"         
+        },   
+        {
+            "name": "ECHIDNA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/319348.jpg"         
+        },   
+        {
+            "name": "DAPHNE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/422864.jpg"         
+        },   
+        {
+            "name": "REGULUS CORNEAS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/433931.jpg"         
+        },   
+        {
+            "name": "FREDERICA BAUMANN",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/318344.jpg"         
+        },   
+        {
+            "name": "KAZUTO KIRIGAYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/241591.webp"         
+        },   
+        {
+            "name": "ASUNA YUUKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/262053.jpg"         
+        },   
+        {
+            "name": "EDWARD ELRIC",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/72533.jpg"         
+        },   
+        {
+            "name": "ALPHONSE ELRIC",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/5/54265.jpg"         
+        },   
+        {
+            "name": "ROY MUSTANG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/307466.webp"         
+        },   
+        {
+            "name": "MAES HUGHES",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/73469.jpg"         
+        },   
+        {
+            "name": "GREED",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/284117.jpg"         
+        },   
+        {
+            "name": "RIZA HAWKEYE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/186275.jpg"         
+        },   
+        {
+            "name": "OLIVIER MIRA ARMSTRONG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/83953.jpg"         
+        },   
+        {
+            "name": "ALEX LOUIS ARMSTRONG",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/71066.jpg"         
+        },   
+        {
+            "name": "LING YAO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/15/62602.jpg"         
+        },   
+        {
+            "name": "IZUKU MIDORIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/7/299404.jpg"         
+        },   
+        {
+            "name": "KATSUKI BAKUGO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/299406.jpg"         
+        },   
+        {
+            "name": "ALL MIGHT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/14/310613.jpg "         
+        },   
+        {
+            "name": "OCHAKO URARAKA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/299421.jpg"         
+        },   
+        {
+            "name": "SHOTO TODOROKI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/299595.jpg"         
+        },   
+        {
+            "name": "EIJIROU KIRISHIMA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/329529.jpg"         
+        },   
+        {
+            "name": "TSUYU ASUI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/299409.jpg"         
+        },   
+        {
+            "name": "DENKI KAMINARI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/329527.jpg"         
+        },   
+        {
+            "name": "SHOUTA AIZAWA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/301855.jpg"         
+        },   
+        {
+            "name": "TENYA IIDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/299418.jpg"         
+        },   
+        {
+            "name": "ALL FOR ONE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/4/370136.jpg"         
+        },   
+        {
+            "name": "MINA ASHIDO",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/329525.jpg"         
+        },   
+        {
+            "name": "ECTOPLASM",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/9/331374.jpg"         
+        },   
+        {
+            "name": "TOORU HAGAKURE",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/301045.jpg"         
+        },   
+        {
+            "name": "CEMENTOS",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/333078.jpg"         
+        },   
+        {
+            "name": "KYOUKA JIROU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/2/300745.jpg"         
+        },   
+        {
+            "name": "MIDNIGHT",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/8/366576.jpg"         
+        },   
+        {
+            "name": "KOUJI KOUDA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/13/301044.jpg"         
+        }, 
+        {
+            "name": "KUROGIRI",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/11/333082.jpg"         
+        },   
+        {
+            "name": "INKO MIDORIYA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/3/301940.jpg"         
+        },   
+        {
+            "name": "MINORU MINETA",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/10/299413.jpg"         
+        },   
+        {
+            "name": "DIRETOR NEZU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/12/333081.jpg"         
+        },   
+        {
+            "name": "NOMU",
+            "imgSrc": "https://cdn.myanimelist.net/images/characters/16/305706.jpg"         
+        } 
+      
+    ]
 }
