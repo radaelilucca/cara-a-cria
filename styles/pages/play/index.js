@@ -81,8 +81,8 @@ export const PlayerChar = styled.div`
 export const CharItem = styled.button`
   background: ${({ checked }) => (checked ? "#EF494B" : "#22253d")};
 
-  max-width: 8rem;
-
+  width: 8rem;
+  height: 8rem;
   border: 0;
 
   display: flex;
@@ -97,11 +97,13 @@ export const CharItem = styled.button`
   border-radius: 16px;
 
   @media (min-width: 764px) {
-    max-width: 10rem;
+    width: 10.5rem;
+    height: 16rem;
   }
 
   @media (min-width: 1366px) {
     max-width: 12rem;
+    height: 16rem;
   }
 `;
 
@@ -111,7 +113,7 @@ export const CharImg = styled.img`
   max-width: 120px;
 
   @media (min-width: 764px) {
-    height: 155px;
+    height: 185px;
   }
 
   @media (min-width: 1366px) {
@@ -120,15 +122,21 @@ export const CharImg = styled.img`
 `;
 
 export const CharName = styled.h3`
-  font-family: "Bangers";
+  font-family: "Roboto";
 
   color: ${({ checked }) => (checked ? "#22253d" : "white")};
 
   padding: 0;
   margin: 0;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.05px;
 
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
   margin-top: 1rem;
+
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

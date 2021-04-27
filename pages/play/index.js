@@ -14,6 +14,8 @@ import {
   PlayerChar,
 } from "../../styles/pages/play";
 
+import ReactCardFlip from "react-card-flip";
+
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
@@ -40,6 +42,7 @@ if (!firebase.apps.length) {
 
 const GameView = () => {
   const [chars, setChars] = useState([]);
+  const [flippedChars, setFlippedChars] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
 
@@ -62,7 +65,7 @@ const GameView = () => {
   const firestore = firebase.firestore();
 
   const charactersRef = firestore.collection("characters");
-  const query = charactersRef;
+  const query = charactersRef.limit(5);
 
   const [characters] = useCollectionData(query);
 
@@ -108,24 +111,23 @@ const GameView = () => {
     </ImgIcon>
   );
 
-  const handleSelectChar = (char) => {
-    const newChars = chars.map((item) => {
-      if (item.id === char.id) {
-        return {
-          ...item,
-          checked: !char?.checked,
-        };
-      }
+  const handleFlipChar = (charId) => {
+    const isFlipped = flippedChars.find((item) => item == charId);
 
-      return item;
-    });
-
-    setChars(newChars);
+    if (isFlipped) {
+      const filteredFlippedChars = flippedChars.filter(
+        (item) => item !== charId
+      );
+      setFlippedChars(filteredFlippedChars);
+    } else {
+      setFlippedChars((prev) => [...prev, charId]);
+    }
   };
 
   const handleModal = () => {
     setModalOpen((prev) => !prev);
   };
+
   return (
     <Container>
       <Header>
@@ -138,14 +140,21 @@ const GameView = () => {
       <CharsContainer>
         {chars &&
           chars.map((char) => (
-            <CharItem
-              checked={char.checked}
-              onClick={() => handleSelectChar(char)}
-              key={char.id}
+            <ReactCardFlip
+              isFlipped={() => flippedChars.some((item) => item === char.id)}
+              flipDirection="horizontal"
             >
-              <CharImg src={char.imageSrc} alt={char.name} />
-              <CharName checked={char.checked}>{char.name}</CharName>
-            </CharItem>
+              <CharItem
+                checked={char.checked}
+                onClick={() => handleFlipChar(char.id)}
+                key={char.id}
+              >
+                <CharImg src={char.imageSrc} alt={char.name} />
+                <CharName checked={char.checked}>{char.name}</CharName>
+              </CharItem>
+
+              <CharItem onClick={() => handleFlipChar(char.id)} key={char.id} />
+            </ReactCardFlip>
           ))}
       </CharsContainer>
 

@@ -17,7 +17,7 @@ const CreateView = () => {
   return (
     <Container>
       <Header>
-        <h2>Create New Room</h2>
+        <h2>Create New Match</h2>
       </Header>
 
       <Form onSubmit={handleSubmit}>
