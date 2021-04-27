@@ -48,7 +48,7 @@ export const CharsContainer = styled.div`
   }
 `;
 
-export const PlayerChar = styled.div`
+export const DetailChar = styled.div`
   background: #22253d;
 
   display: flex;
@@ -56,7 +56,7 @@ export const PlayerChar = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 1.5rem;
+  padding: 1rem;
 
   border-radius: 16px;
   border: 0;
@@ -64,16 +64,17 @@ export const PlayerChar = styled.div`
   img {
     border-radius: 16px;
     border: 2px solid white;
-    height: 324px;
+    height: 280px;
   }
 
   h3 {
-    font-family: "Bangers";
+    font-family: "Roboto";
+    font-weight: bold;
     color: ${({ checked }) => (checked ? "#22253d" : "white")};
     padding: 0;
     margin: 0;
     letter-spacing: 1.5px;
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-top: 1rem;
   }
 `;

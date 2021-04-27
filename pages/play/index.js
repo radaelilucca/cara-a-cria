@@ -11,7 +11,7 @@ import {
   CharName,
   CharsContainer,
   ImgIcon,
-  PlayerChar,
+  DetailChar,
 } from "../../styles/pages/play";
 
 import ReactCardFlip from "react-card-flip";
@@ -65,7 +65,7 @@ const GameView = () => {
   const firestore = firebase.firestore();
 
   const charactersRef = firestore.collection("characters");
-  const query = charactersRef.limit(5);
+  const query = charactersRef.limit(20);
 
   const [characters] = useCollectionData(query);
 
@@ -79,7 +79,7 @@ const GameView = () => {
           };
         })
         .sort(() => Math.random() - 0.5)
-        .slice(0, 12);
+        .slice(0, 20);
 
       if (parsedChars) {
         const player =
@@ -132,7 +132,7 @@ const GameView = () => {
     <Container>
       <Header>
         <h2>
-          Você é o: <span>{playerChar?.name}</span>
+          You are: <span>{playerChar?.name}</span>
         </h2>
         <ImageIcon onClick={handleModal} />
       </Header>
@@ -148,6 +148,7 @@ const GameView = () => {
                 checked={char.checked}
                 onClick={() => handleFlipChar(char.id)}
                 key={char.id}
+                id="#charItem"
               >
                 <CharImg src={char.imageSrc} alt={char.name} />
                 <CharName checked={char.checked}>{char.name}</CharName>
@@ -165,10 +166,10 @@ const GameView = () => {
         contentLabel="Example Modal"
       >
         {playerChar && (
-          <PlayerChar>
-            <img src={playerChar.imgSrc} alt={playerChar.name} />
-            <h3 checked={playerChar.checked}>{playerChar.name}</h3>
-          </PlayerChar>
+          <DetailChar>
+            <img src={playerChar.imageSrc} alt={playerChar.name} />
+            <h3>{playerChar.name}</h3>
+          </DetailChar>
         )}
       </Modal>
     </Container>
