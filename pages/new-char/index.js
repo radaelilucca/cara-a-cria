@@ -56,11 +56,18 @@ const CreateView = () => {
   const [characters] = useCollectionData(charactersRef);
 
   const handleSelectChange = async (newValue) => {
-    const newCategory = newValue[newValue.length - 1];
+    const parsedCategories = newValue.map((item) => ({
+      ...item,
+      id: uuid(),
+      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+    }));
 
-    const categoryId = uuid();
+    const newCategory = parsedCategories[parsedCategories.length - 1];
 
-    setFormData((prev) => ({ ...formData, categories: newValue }));
+    setFormData((prev) => ({
+      ...prev,
+      categories: parsedCategories,
+    }));
 
     if (
       !newCategory ||
@@ -69,14 +76,9 @@ const CreateView = () => {
       return;
     }
 
-    const { label, value } = newCategory;
+    const { label, value, id, createdAt } = newCategory;
 
-    await categoriesRef.add({
-      label,
-      value,
-      id: categoryId,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-    });
+    await categoriesRef.add({ label, value, id, createdAt });
   };
 
   const handleInputChange = (e) => {
@@ -97,19 +99,11 @@ const CreateView = () => {
         throw new Error("This char already exists");
       }
 
-      // console.log({
-      //   id: uuid(),
-      //   name: formData.name,
-      //   imageSrc: formData.imageSrc,
-      //   categories: formData.categories.map((item) => item.id),
-      //   createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      // });
-
       await charactersRef.add({
         id: uuid(),
         name: formData.name,
         imageSrc: formData.imageSrc,
-        categories: formData.categories,
+        categories: formData.categories.map((item) => item.id),
         createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       });
 
@@ -198,7 +192,7 @@ const CreateView = () => {
         />
         <CreateButton type="submit">Create</CreateButton>
 
-        <CreateButton type="button" onClick={handleImportFromJson}>
+        <CreateButton type="button" onClick={handleImportFromJson} disabled>
           Import From Json
         </CreateButton>
       </Form>
