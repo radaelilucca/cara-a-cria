@@ -56,9 +56,11 @@ const GameView = () => {
       transform: "translate(-50%, -50%)",
       backgroundColor: "transparent",
       border: "none",
+      zIndex: 100,
     },
     overlay: {
       backgroundColor: "rgba(19, 15, 26, .85)",
+      zIndex: 100,
     },
   };
 

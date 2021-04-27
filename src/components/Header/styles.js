@@ -16,6 +16,7 @@ export const HeaderContainer = styled.div`
 
   position: fixed;
   top: 0;
+  z-index: 99;
 
   h2,
   span {
