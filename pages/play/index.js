@@ -148,7 +148,6 @@ const GameView = () => {
                 checked={char.checked}
                 onClick={() => handleFlipChar(char.id)}
                 key={char.id}
-                id="#charItem"
               >
                 <CharImg src={char.imageSrc} alt={char.name} />
                 <CharName checked={char.checked}>{char.name}</CharName>
