@@ -97,21 +97,21 @@ const CreateView = () => {
         throw new Error("This char already exists");
       }
 
-      console.log({
-        id: uuid(),
-        name: formData.name,
-        imageSrc: formData.imageSrc,
-        categories: formData.categories.map((item) => item.id),
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      });
-
-      // await charactersRef.add({
+      // console.log({
       //   id: uuid(),
       //   name: formData.name,
       //   imageSrc: formData.imageSrc,
-      //   categories: formData.categories,
+      //   categories: formData.categories.map((item) => item.id),
       //   createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       // });
+
+      await charactersRef.add({
+        id: uuid(),
+        name: formData.name,
+        imageSrc: formData.imageSrc,
+        categories: formData.categories,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      });
 
       setFormData({
         name: "",
