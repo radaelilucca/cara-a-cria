@@ -22,14 +22,19 @@ export const Header = styled.div`
   position: fixed;
   top: 0;
 
-  h2 {
-    font-size: 1.4rem;
+  h2,
+  span {
+    font-size: 1.3rem;
     color: black;
 
     font-family: "Roboto";
     font-weight: 600;
 
     color: white;
+  }
+
+  span {
+    text-transform: uppercase;
   }
 `;
 
@@ -59,6 +64,36 @@ export const CharsContainer = styled.div`
   max-height: calc(100vh - 20px);
 
   overflow: scroll;
+`;
+
+export const PlayerChar = styled.div`
+  background: #22253d;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.5rem;
+
+  border-radius: 16px;
+  border: 0;
+
+  img {
+    border-radius: 16px;
+    border: 2px solid white;
+    height: 324px;
+  }
+
+  h3 {
+    font-family: "Bangers";
+    color: ${({ checked }) => (checked ? "#22253d" : "white")};
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1.5px;
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
 `;
 
 export const CharItem = styled.button`

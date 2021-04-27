@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import Modal from "react-modal";
+
 import uuid from "react-uuid";
 
 import {
@@ -10,16 +12,33 @@ import {
   CharName,
   CharsContainer,
   ImgIcon,
+  PlayerChar,
 } from "../../styles/pages/play";
 
 import fakeChars from "../../anime-chars.json";
 
 const GameView = () => {
   const [chars, setChars] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [playerChar, setPlayerChar] = useState(null);
+
+  const customModalStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "transparent",
+      border: "none",
+    },
+    overlay: {
+      backgroundColor: "rgba(19, 15, 26, .85)",
+    },
+  };
 
   useEffect(() => {
-    console.log(fakeChars);
-
     const parsedChars = fakeChars.chars.map((char) => {
       return {
         ...char,
@@ -27,11 +46,17 @@ const GameView = () => {
       };
     });
 
+    if (parsedChars) {
+      const player =
+        parsedChars[Math.floor(Math.random() * parsedChars.length)];
+      setPlayerChar(player);
+    }
+
     setChars(parsedChars);
   }, []);
 
   const ImageIcon = () => (
-    <ImgIcon onClick={() => alert("should show my character")}>
+    <ImgIcon onClick={handleModal}>
       <svg
         aria-hidden="true"
         focusable="false"
@@ -66,11 +91,17 @@ const GameView = () => {
 
     setChars(newChars);
   };
+
+  const handleModal = () => {
+    setModalOpen((prev) => !prev);
+  };
   return (
     <Container>
       <Header>
-        <h2>Você é o: Naruto Hatake</h2>
-        <ImageIcon />
+        <h2>
+          Você é o: <span>{playerChar?.name}</span>
+        </h2>
+        <ImageIcon onClick={handleModal} />
       </Header>
 
       <CharsContainer>
@@ -86,6 +117,20 @@ const GameView = () => {
             </CharItem>
           ))}
       </CharsContainer>
+
+      <Modal
+        style={customModalStyles}
+        isOpen={playerChar && modalOpen}
+        onRequestClose={() => setModalOpen(false)}
+        contentLabel="Example Modal"
+      >
+        {playerChar && (
+          <PlayerChar>
+            <img src={playerChar.imgSrc} alt={playerChar.name} />
+            <h3 checked={playerChar.checked}>{playerChar.name}</h3>
+          </PlayerChar>
+        )}
+      </Modal>
     </Container>
   );
 };
