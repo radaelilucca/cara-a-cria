@@ -31,6 +31,21 @@ export const CharsContainer = styled.div`
   max-height: calc(100vh - 20px);
 
   overflow: scroll;
+
+  @media (min-width: 764px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.2rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  @media (min-width: 1366px) {
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 1.8rem;
+  }
 `;
 
 export const PlayerChar = styled.div`
@@ -80,11 +95,27 @@ export const CharItem = styled.button`
   padding: 1rem;
 
   border-radius: 16px;
+
+  @media (min-width: 764px) {
+    max-width: 10rem;
+  }
+
+  @media (min-width: 1366px) {
+    max-width: 12rem;
+  }
 `;
 
 export const CharImg = styled.img`
   border-radius: 16px;
   height: 135px;
+
+  @media (min-width: 764px) {
+    height: 155px;
+  }
+
+  @media (min-width: 1366px) {
+    height: 185px;
+  }
 `;
 
 export const CharName = styled.h3`

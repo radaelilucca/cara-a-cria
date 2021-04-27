@@ -31,7 +31,7 @@ var firebaseConfig = {
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 } else {
-  firebase.app(); // if already initialized, use that one
+  firebase.app();
 }
 
 const CharsView = () => {
@@ -40,16 +40,9 @@ const CharsView = () => {
   const firestore = firebase.firestore();
 
   const charactersRef = firestore.collection("characters");
-  const query = charactersRef.orderBy("createdAt");
+  const query = charactersRef.orderBy("createdAt", "desc");
 
   const [characters] = useCollectionData(query);
-
-  useEffect(() => {
-    if (characters) {
-      console.log(characters);
-      setChars(characters);
-    }
-  }, [characters]);
 
   return (
     <Container>
@@ -58,8 +51,8 @@ const CharsView = () => {
       </Header>
 
       <CharsContainer>
-        {chars &&
-          chars.map((char) => (
+        {characters &&
+          characters.map((char) => (
             <CharItem key={char.id}>
               <CharImg src={char.imageSrc} alt={char.name} />
               <CharName>{char.name}</CharName>

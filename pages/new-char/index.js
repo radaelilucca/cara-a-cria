@@ -99,6 +99,7 @@ const CreateView = () => {
         name: formData.name,
         imageSrc: formData.imageSrc,
         categories: formData.categories,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
       });
 
       setFormData({
