@@ -3,6 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const ImgIcon = styled.button`
@@ -10,26 +15,32 @@ export const ImgIcon = styled.button`
   margin-left: auto;
 
   svg {
-    height: 2rem;
-    width: 2rem;
+    height: 1.5rem;
+    width: 1.5rem;
 
     path {
       fill: white;
+    }
+  }
+
+  @media (min-width: 1366px) {
+    svg {
+      height: 2rem;
+      width: 2rem;
     }
   }
 `;
 
 export const CharsContainer = styled.div`
   display: grid;
+  grid-gap: 0.2rem;
 
-  margin: 200px 0;
-  padding: 0 1rem;
+  padding: 0 0.2rem;
+
+  margin-top: 100px;
+  margin-bottom: 1rem;
 
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-
-  /* max-height: calc(100vh - 20px); */
-
   overflow: scroll;
 
   @media (min-width: 500px) {
@@ -39,7 +50,7 @@ export const CharsContainer = styled.div`
 
   @media (min-width: 764px) {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.2rem;
+    grid-gap: 1.3rem;
   }
 
   @media (min-width: 1024px) {
@@ -49,7 +60,7 @@ export const CharsContainer = styled.div`
 
   @media (min-width: 1366px) {
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1.8rem;
+    grid-gap: 1.6rem;
   }
 `;
 
@@ -61,7 +72,7 @@ export const DetailChar = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 1rem;
+  padding: 0.8rem;
 
   border-radius: 16px;
   border: 0;
@@ -72,23 +83,34 @@ export const DetailChar = styled.div`
     height: 280px;
   }
 
+  @media (min-height: 500px) {
+    img {
+      height: 380px;
+    }
+  }
+
   h3 {
     font-family: "Roboto";
-    font-weight: bold;
-    color: ${({ checked }) => (checked ? "#22253d" : "white")};
+
+    color: white;
     padding: 0;
     margin: 0;
-    letter-spacing: 1.5px;
+
     font-size: 1.4rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    min-height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 export const CharItem = styled.button`
-  background: ${({ checked }) => (checked ? "#EF494B" : "#22253d")};
+  background: #22253d;
 
-  width: 8rem;
-  height: 14rem;
+  width: 100%;
+  height: 16rem;
 
   border: 0;
 
@@ -116,8 +138,7 @@ export const CharItem = styled.button`
 
 export const CharImg = styled.img`
   border-radius: 16px;
-  height: 135px;
-  max-width: 120px;
+  height: 86%;
 
   @media (min-width: 500px) {
     height: 155px;
@@ -142,13 +163,17 @@ export const CharName = styled.h3`
   margin: 0;
   letter-spacing: 1.05px;
 
-  font-size: 1.1rem;
+  font-size: 1rem;
 
-  margin-top: 1rem;
+  margin-top: 0.4rem;
 
-  height: 2rem;
+  min-height: 2.5rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 500px) {
+    font-size: 1.2rem;
+  }
 `;

@@ -20,7 +20,7 @@ export const HeaderContainer = styled.div`
 
   h2,
   span {
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     color: black;
 
     font-family: "Roboto";
