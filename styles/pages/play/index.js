@@ -88,6 +88,7 @@ export const CharItem = styled.button`
   background: ${({ checked }) => (checked ? "#EF494B" : "#22253d")};
 
   width: 8rem;
+  height: 8rem;
 
   border: 0;
 
@@ -104,10 +105,12 @@ export const CharItem = styled.button`
 
   @media (min-width: 764px) {
     width: 10rem;
+    height: 16rem;
   }
 
   @media (min-width: 1366px) {
     max-width: 12rem;
+    height: 18rem;
   }
 `;
 
