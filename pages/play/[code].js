@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import Modal from "react-modal";
 import { useRouter } from "next/router";
@@ -35,6 +35,8 @@ const GameView = () => {
   const [flippedChars, setFlippedChars] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
+
+  const bgAudioRef = useRef(null);
 
   const [currentMatch, setCurrentMatch] = useState(null);
 
@@ -80,6 +82,13 @@ const GameView = () => {
       setPlayerChar(player);
     }
   }, [matches]);
+
+  useEffect(() => {
+    if (bgAudioRef.current) {
+      console.log("should play audio");
+      bgAudioRef.current.play();
+    }
+  }, [bgAudioRef]);
 
   const ImageIcon = () => (
     <ImgIcon onClick={handleModal}>
@@ -161,6 +170,8 @@ const GameView = () => {
           </DetailChar>
         )}
       </Modal>
+
+      <audio ref={bgAudioRef} src="/assets/bgmusic.mp3" loop />
     </Container>
   );
 };

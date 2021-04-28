@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
 import {
@@ -12,6 +12,8 @@ import {
 
 import { Label, Input } from "../styles/pages/new-char";
 
+import Router from "next/router";
+
 import Header from "../src/components/Header";
 
 // import firebase from "firebase/app";
@@ -23,6 +25,7 @@ import Header from "../src/components/Header";
 // import { useCollectionData } from "react-firebase-hooks/firestore";
 
 export default function Home() {
+  const [matchCode, setMatchCode] = useState("");
   // function SignIn() {
   //   const signInWithGoogle = () => {
   //     const provider = new firebase.auth.GoogleAuthProvider();
@@ -46,20 +49,9 @@ export default function Home() {
   //   );
   // }
 
-  const Logged = () => {
-    return (
-      <>
-        <Link href="/create">
-          <LinkButton>Create a Game</LinkButton>
-        </Link>
-        ;
-        <JoinGameContainer>
-          <Label>Enter a match code</Label>
-          <Input name="roomCode" placeholder="match code" />
-        </JoinGameContainer>
-        <JoinButton>Join</JoinButton>
-      </>
-    );
+  const handleJoinGame = (e) => {
+    e.preventDefault();
+    Router.push(`/play/${matchCode}`);
   };
 
   const ImageIcon = () => (
@@ -88,10 +80,22 @@ export default function Home() {
         <h2>Home</h2>
         <ImageIcon />
       </Header>
-      {/* <section>{user ? <Logged /> : <SignIn />}</section> */}
-      <Logged />
-      {/* <NavButton>Rooms</NavButton>
-      <NavButton>Sair</NavButton> */}
+
+      <Link href="/create">
+        <LinkButton>Create a Game</LinkButton>
+      </Link>
+      <form onSubmit={handleJoinGame}>
+        <JoinGameContainer>
+          <Label>Enter a match code</Label>
+          <Input
+            name="roomCode"
+            placeholder="match code"
+            value={matchCode}
+            onChange={(e) => setMatchCode(e.target.value)}
+          />
+        </JoinGameContainer>
+        <JoinButton type="submit">Join</JoinButton>
+      </form>
     </Container>
   );
 }

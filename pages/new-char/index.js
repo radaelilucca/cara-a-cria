@@ -78,7 +78,7 @@ const CreateView = () => {
 
     const { label, value, id, createdAt } = newCategory;
 
-    await 1
+    await categoriesRef({ label, value, id, createdAt });
   };
 
   const handleInputChange = (e) => {
