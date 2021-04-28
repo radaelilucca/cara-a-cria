@@ -34,7 +34,7 @@ const CreateView = () => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     maxPlayers: "",
-    maxCharacters: 50,
+    maxCharacters: "",
     categories: [],
   });
 
@@ -95,7 +95,6 @@ const CreateView = () => {
             <Group>
               <Label>Players</Label>
               <Input
-                type="number"
                 name="maxPlayers"
                 value={formData.maxPlayers}
                 onChange={handleFormChange}
@@ -104,7 +103,6 @@ const CreateView = () => {
             <Group>
               <Label>Max. Characters</Label>
               <Input
-                type="number"
                 name="maxCharacters"
                 value={formData.maxCharacters}
                 onChange={handleFormChange}
