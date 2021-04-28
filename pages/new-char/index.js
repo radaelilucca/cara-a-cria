@@ -13,7 +13,7 @@ import "firebase/firestore";
 import "firebase/auth";
 import "firebase/analytics";
 
-import { useCollectionData } from "react-firebase-hooks/firestore";
+import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
 
 import CreatableSelect from "react-select/creatable";
 
@@ -49,11 +49,11 @@ const CreateView = () => {
   const categoriesRef = firestore.collection("categories");
   const query = categoriesRef;
 
-  const [categories] = useCollectionData(query);
+  const [categories] = useCollectionDataOnce(query);
 
   const charactersRef = firestore.collection("characters");
 
-  const [characters] = useCollectionData(charactersRef);
+  const [characters] = useCollectionDataOnce(charactersRef);
 
   const handleSelectChange = async (newValue) => {
     const parsedCategories = newValue.map((item) => ({

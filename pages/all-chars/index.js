@@ -15,7 +15,7 @@ import "firebase/firestore";
 import "firebase/auth";
 import "firebase/analytics";
 
-import { useCollectionData } from "react-firebase-hooks/firestore";
+import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
 
 import Header from "../../src/components/Header";
 
@@ -42,7 +42,7 @@ const CharsView = () => {
   const charactersRef = firestore.collection("characters");
   const query = charactersRef.orderBy("createdAt", "desc").limit(10);
 
-  const [characters] = useCollectionData(query);
+  const [characters] = useCollectionDataOnce(query);
 
   return (
     <Container>
