@@ -55,7 +55,7 @@ export default function Home() {
   };
 
   const ImageIcon = () => (
-    <ImgIcon onClick={() => auth.signOut()}>
+    <ImgIcon>
       <svg
         aria-hidden="true"
         focusable="false"
