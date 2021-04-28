@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 60vh;
+  height: 100vh;
   width: 50vw;
 
   padding: 2rem;
@@ -13,6 +13,8 @@ export const Container = styled.div`
 
   justify-content: center;
   align-items: center;
+
+  margin-top: 64px;
 `;
 
 export const ImgIcon = styled.button`
