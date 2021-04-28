@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Modal from "react-modal";
-
-import uuid from "react-uuid";
+import { useRouter } from "next/router";
 
 import {
   Container,
@@ -13,26 +12,15 @@ import {
   ImgIcon,
   DetailChar,
 } from "../../styles/pages/play";
+import Header from "../../src/components/Header";
 
 import ReactCardFlip from "react-card-flip";
 
 import firebase from "firebase/app";
+
 import "firebase/firestore";
-import "firebase/auth";
-import "firebase/analytics";
 
-import { useCollectionData } from "react-firebase-hooks/firestore";
-
-import Header from "../../src/components/Header";
-
-var firebaseConfig = {
-  apiKey: "AIzaSyBlzLd5oIftzTctFxmoz_C1tblgsPh1epw",
-  authDomain: "cara-a-cria.firebaseapp.com",
-  projectId: "cara-a-cria",
-  storageBucket: "cara-a-cria.appspot.com",
-  messagingSenderId: "45440690874",
-  appId: "1:45440690874:web:5e3f1937bd1fc7a8767083",
-};
+import { firebaseConfig } from "../../config/firebase";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -40,11 +28,15 @@ if (!firebase.apps.length) {
   firebase.app(); // if already initialized, use that one
 }
 
+import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
+
 const GameView = () => {
   const [chars, setChars] = useState([]);
   const [flippedChars, setFlippedChars] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
+
+  const [currentMatch, setCurrentMatch] = useState(null);
 
   const customModalStyles = {
     content: {
@@ -64,34 +56,30 @@ const GameView = () => {
     },
   };
 
+  const router = useRouter();
+
+  const { code } = router.query;
+
   const firestore = firebase.firestore();
 
-  const charactersRef = firestore.collection("characters");
-  const query = charactersRef.limit(20);
+  const matchesRef = firestore.collection("matches");
 
-  const [characters] = useCollectionData(query);
+  const [matches] = useCollectionDataOnce(matchesRef);
 
   useEffect(() => {
-    if (characters) {
-      const parsedChars = characters
-        .map((char) => {
-          return {
-            ...char,
-            id: uuid(),
-          };
-        })
-        .sort(() => Math.random() - 0.5)
-        .slice(0, 20);
+    if (matches) {
+      const matchFromCode = matches.find((item) => item.code === Number(code));
+      setCurrentMatch(matchFromCode);
 
-      if (parsedChars) {
-        const player =
-          parsedChars[Math.floor(Math.random() * parsedChars.length)];
-        setPlayerChar(player);
-      }
+      setChars(matchFromCode.chars);
 
-      setChars(parsedChars);
+      const player =
+        matchFromCode.chars[
+          Math.floor(Math.random() * matchFromCode.chars.length)
+        ];
+      setPlayerChar(player);
     }
-  }, [characters]);
+  }, [matches]);
 
   const ImageIcon = () => (
     <ImgIcon onClick={handleModal}>

@@ -1,75 +1,95 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Link from "next/link";
 
-import { Container, NavButton } from "../styles/pages/home";
+import {
+  Container,
+  // NavButton,
+  ImgIcon,
+  LinkButton,
+  JoinGameContainer,
+  JoinButton,
+} from "../styles/pages/home";
+
+import { Label, Input } from "../styles/pages/new-char";
 
 import Header from "../src/components/Header";
 
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
-import "firebase/analytics";
+// import firebase from "firebase/app";
+// import "firebase/firestore";
+// import "firebase/auth";
+// import "firebase/analytics";
 
-import { useAuthState } from "react-firebase-hooks/auth";
-import { useCollectionData } from "react-firebase-hooks/firestore";
-
-var firebaseConfig = {
-  apiKey: "AIzaSyBlzLd5oIftzTctFxmoz_C1tblgsPh1epw",
-  authDomain: "cara-a-cria.firebaseapp.com",
-  projectId: "cara-a-cria",
-  storageBucket: "cara-a-cria.appspot.com",
-  messagingSenderId: "45440690874",
-  appId: "1:45440690874:web:5e3f1937bd1fc7a8767083",
-};
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
-}
-
-const auth = firebase.auth();
-const firestore = firebase.firestore();
+// import { useAuthState } from "react-firebase-hooks/auth";
+// import { useCollectionData } from "react-firebase-hooks/firestore";
 
 export default function Home() {
-  const [user] = useAuthState(auth);
+  // function SignIn() {
+  //   const signInWithGoogle = () => {
+  //     const provider = new firebase.auth.GoogleAuthProvider();
+  //     auth.signInWithPopup(provider);
+  //   };
 
-  useEffect(() => {
-    console.log(user);
-  }, [user]);
+  //   return (
+  //     <>
+  //       <NavButton className="sign-in" onClick={signInWithGoogle}>
+  //         Sign in with Google
+  //       </NavButton>
+  //     </>
+  //   );
+  // }
 
-  function SignIn() {
-    const signInWithGoogle = () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider);
-    };
+  // function SignOut() {
+  //   return (
+  //     auth.currentUser && (
+  //       <NavButton onClick={() => auth.signOut()}>Sign Out</NavButton>
+  //     )
+  //   );
+  // }
 
+  const Logged = () => {
     return (
       <>
-        <NavButton className="sign-in" onClick={signInWithGoogle}>
-          Sign in with Google
-        </NavButton>
+        <Link href="/create">
+          <LinkButton>Create a Game</LinkButton>
+        </Link>
+        ;
+        <JoinGameContainer>
+          <Label>Enter a match code</Label>
+          <Input name="roomCode" placeholder="match code" />
+        </JoinGameContainer>
+        <JoinButton>Join</JoinButton>
       </>
     );
-  }
+  };
 
-  function SignOut() {
-    return (
-      auth.currentUser && (
-        <NavButton className="sign-out" onClick={() => auth.signOut()}>
-          Sign Out
-        </NavButton>
-      )
-    );
-  }
+  const ImageIcon = () => (
+    <ImgIcon onClick={() => auth.signOut()}>
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="sign-out-alt"
+        class="svg-inline--fa fa-sign-out-alt fa-w-16"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"
+        ></path>
+      </svg>
+    </ImgIcon>
+  );
 
   return (
     <Container>
       <Header>
         <h2>Home</h2>
+        <ImageIcon />
       </Header>
-
-      <section>{user ? <SignOut /> : <SignIn />}</section>
-
+      {/* <section>{user ? <Logged /> : <SignIn />}</section> */}
+      <Logged />
       {/* <NavButton>Rooms</NavButton>
       <NavButton>Sair</NavButton> */}
     </Container>

@@ -6,7 +6,6 @@ export const Container = styled.div`
 
   padding: 2rem;
 
-  background: red;
   border-radius: 16px;
 
   display: flex;
@@ -14,6 +13,20 @@ export const Container = styled.div`
 
   justify-content: center;
   align-items: center;
+`;
+
+export const ImgIcon = styled.button`
+  all: unset;
+  margin-left: auto;
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+
+    path {
+      fill: white;
+    }
+  }
 `;
 
 export const NavButton = styled.button`
@@ -28,6 +41,42 @@ export const NavButton = styled.button`
 
   margin-bottom: 1.4rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const LinkButton = styled.button`
+  height: 84px;
+  min-width: 420px;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+
+  background-color: #22253d;
+
+  border: none;
+  color: white;
+
+  border-radius: 15px;
+`;
+
+export const JoinButton = styled.button`
+  height: 84px;
+  min-width: 420px;
+
+  margin-top: 1rem;
+  font-size: 1.5rem;
+
+  background-color: #22253d;
+
+  border: none;
+  color: white;
+
+  border-radius: 15px;
+`;
+
+export const JoinGameContainer = styled.div`
+  min-width: 420px;
   display: flex;
   justify-content: space-between;
   align-items: center;
