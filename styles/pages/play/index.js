@@ -28,7 +28,7 @@ export const CharsContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 
-  max-height: calc(100vh - 20px);
+  /* max-height: calc(100vh - 20px); */
 
   overflow: scroll;
 
