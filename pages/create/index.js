@@ -52,17 +52,19 @@ const CreateView = () => {
       .sort(() => Math.random() - 0.5)
       .slice(0, maxCharacters);
 
+    const code = Math.floor(Math.random() * 10000);
+
     const newMatch = {
       chars,
       maxPlayers,
       maxCharacters,
       status: "waiting",
       players: [],
-      code: Math.floor(Math.random() * 10000),
+      code,
     };
 
     try {
-      matchesRef.add(newMatch);
+      matchesRef.doc(`match-${code}`).set(newMatch);
       setLoading(false);
 
       Router.push(`/play/${newMatch.code}`);

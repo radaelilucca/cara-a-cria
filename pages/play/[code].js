@@ -28,7 +28,11 @@ if (!firebase.apps.length) {
   firebase.app(); // if already initialized, use that one
 }
 
-import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
+import {
+  useCollectionDataOnce,
+  useDocumentData,
+  useDocumentDataOnce,
+} from "react-firebase-hooks/firestore";
 
 const GameView = () => {
   const [chars, setChars] = useState([]);
@@ -64,24 +68,27 @@ const GameView = () => {
 
   const firestore = firebase.firestore();
 
-  const matchesRef = firestore.collection("matches");
+  const singleMatchRef = firestore.collection("matches").doc(`match-${code}`);
 
-  const [matches] = useCollectionDataOnce(matchesRef);
+  const [singleMatch] = useDocumentData(singleMatchRef);
 
   useEffect(() => {
-    if (matches) {
-      const matchFromCode = matches.find((item) => item.code === Number(code));
-      setCurrentMatch(matchFromCode);
-
-      setChars(matchFromCode.chars);
+    if (singleMatch && !playerChar) {
+      setCurrentMatch(singleMatch);
+      setChars(singleMatch.chars);
 
       const player =
-        matchFromCode.chars[
-          Math.floor(Math.random() * matchFromCode.chars.length)
-        ];
+        singleMatch.chars[Math.floor(Math.random() * singleMatch.chars.length)];
       setPlayerChar(player);
+
+      const prevPlayers = singleMatch.players || [];
+
+      singleMatchRef.update({
+        ...singleMatch,
+        players: [...prevPlayers, player.id],
+      });
     }
-  }, [matches]);
+  }, [singleMatch]);
 
   useEffect(() => {
     if (bgAudioRef.current) {
