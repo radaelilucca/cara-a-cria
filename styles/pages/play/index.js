@@ -25,12 +25,17 @@ export const CharsContainer = styled.div`
   margin: 200px 0;
   padding: 0 1rem;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 
   max-height: calc(100vh - 20px);
 
   overflow: scroll;
+
+  @media (min-width: 500px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.2rem;
+  }
 
   @media (min-width: 764px) {
     grid-template-columns: repeat(4, 1fr);
@@ -83,7 +88,7 @@ export const CharItem = styled.button`
   background: ${({ checked }) => (checked ? "#EF494B" : "#22253d")};
 
   width: 8rem;
-  height: 8rem;
+
   border: 0;
 
   display: flex;
@@ -98,13 +103,11 @@ export const CharItem = styled.button`
   border-radius: 16px;
 
   @media (min-width: 764px) {
-    width: 10.5rem;
-    height: 16rem;
+    width: 10rem;
   }
 
   @media (min-width: 1366px) {
     max-width: 12rem;
-    height: 16rem;
   }
 `;
 
@@ -112,6 +115,11 @@ export const CharImg = styled.img`
   border-radius: 16px;
   height: 135px;
   max-width: 120px;
+
+  @media (min-width: 500px) {
+    height: 155px;
+    max-width: 140px;
+  }
 
   @media (min-width: 764px) {
     height: 185px;
