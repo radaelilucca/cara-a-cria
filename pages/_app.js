@@ -1,18 +1,14 @@
 import "../styles/globals.css";
 import Modal from "react-modal";
 
-import firebase from "firebase/app";
-
-import { firebaseConfig } from "../config/firebase";
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
-}
+import { AuthProvider } from "../context/auth";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
 }
 
 Modal.setAppElement("#__next");

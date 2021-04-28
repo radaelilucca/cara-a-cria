@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 
 import Modal from "react-modal";
 import Router, { useRouter } from "next/router";
@@ -14,25 +14,11 @@ import {
 } from "../../styles/pages/play";
 import Header from "../../src/components/Header";
 
+import { AuthContext } from "../../context/auth";
+
 import ReactCardFlip from "react-card-flip";
 
-import firebase from "firebase/app";
-
-import "firebase/firestore";
-
-import { firebaseConfig } from "../../config/firebase";
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
-}
-
-import {
-  useCollectionDataOnce,
-  useDocumentData,
-  useDocumentDataOnce,
-} from "react-firebase-hooks/firestore";
+import { useDocumentData } from "react-firebase-hooks/firestore";
 
 const GameView = () => {
   const [chars, setChars] = useState([]);
@@ -40,9 +26,9 @@ const GameView = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
 
-  const bgAudioRef = useRef(null);
+  const { user, loading, firestore } = useContext(AuthContext);
 
-  const [currentMatch, setCurrentMatch] = useState(null);
+  const bgAudioRef = useRef(null);
 
   const customModalStyles = {
     content: {
@@ -66,33 +52,59 @@ const GameView = () => {
 
   const { code } = router.query;
 
-  const firestore = firebase.firestore();
-
   const singleMatchRef = firestore.collection("matches").doc(`match-${code}`);
 
-  const [singleMatch] = useDocumentData(singleMatchRef);
+  const [singleMatch, loadingMatch] = useDocumentData(singleMatchRef);
 
   useEffect(() => {
-    if (singleMatch && !playerChar) {
-      setCurrentMatch(singleMatch);
-      setChars(singleMatch.chars);
+    if (!loadingMatch) {
+      if (singleMatch) {
+        setChars(singleMatch.chars);
 
-      const player =
-        singleMatch.chars[Math.floor(Math.random() * singleMatch.chars.length)];
-      setPlayerChar(player);
+        if (!playerChar) {
+          const { players = [] } = singleMatch;
 
-      const prevPlayers = singleMatch.players || [];
+          const hasChar = players.find((item) => item.id === user.uid);
 
-      singleMatchRef.update({
-        ...singleMatch,
-        players: [...prevPlayers, player.id],
-      });
+          if (!hasChar) {
+            const selectedChars = players.map((item) => item.charId);
+
+            const availableChars = singleMatch.chars.filter(
+              (item) => !selectedChars.includes(item.id)
+            );
+
+            const selectedChar =
+              availableChars[
+                Math.floor(Math.random() * singleMatch.chars.length)
+              ];
+            setPlayerChar(selectedChar);
+
+            singleMatchRef.update({
+              ...singleMatch,
+              players: [
+                ...players,
+                {
+                  id: user.uid,
+                  charId: selectedChar.id,
+                  charName: selectedChar.name,
+                },
+              ],
+            });
+          } else {
+            const loadedPlayerChar = singleMatch.chars.find(
+              (item) => item.id === hasChar.charId
+            );
+            setPlayerChar(loadedPlayerChar);
+          }
+        }
+      } else {
+        alert("Match not found");
+      }
     }
-  }, [singleMatch]);
+  }, [singleMatch, loadingMatch]);
 
   useEffect(() => {
     if (bgAudioRef.current) {
-      console.log("should play audio");
       bgAudioRef.current.play();
     }
   }, [bgAudioRef]);
@@ -154,11 +166,15 @@ const GameView = () => {
     setModalOpen((prev) => !prev);
   };
 
+  useEffect(() => {
+    if (!user && !loading) Router.push("/");
+  }, [user, loading]);
+
   return (
     <Container>
       <Header>
         <h2>
-          You are: <span>{playerChar?.name}</span>
+          You are: <span>{playerChar?.name}</span>{" "}
         </h2>
         <LogoutIcon onClick={handleModal} />
         <ImageIcon onClick={handleModal} />

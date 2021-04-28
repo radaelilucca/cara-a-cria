@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 
 import {
   Container,
-  // NavButton,
+  NavButton,
   ImgIcon,
   LinkButton,
   JoinGameContainer,
@@ -15,47 +15,32 @@ import { Label, Input } from "../styles/pages/new-char";
 import Router from "next/router";
 
 import Header from "../src/components/Header";
-
-// import firebase from "firebase/app";
-// import "firebase/firestore";
-// import "firebase/auth";
-// import "firebase/analytics";
-
-// import { useAuthState } from "react-firebase-hooks/auth";
-// import { useCollectionData } from "react-firebase-hooks/firestore";
+import { AuthContext } from "../context/auth";
 
 export default function Home() {
   const [matchCode, setMatchCode] = useState("");
-  // function SignIn() {
-  //   const signInWithGoogle = () => {
-  //     const provider = new firebase.auth.GoogleAuthProvider();
-  //     auth.signInWithPopup(provider);
-  //   };
 
-  //   return (
-  //     <>
-  //       <NavButton className="sign-in" onClick={signInWithGoogle}>
-  //         Sign in with Google
-  //       </NavButton>
-  //     </>
-  //   );
-  // }
+  const { user, loading, signInWithGoogle, signOutGoogle } = useContext(
+    AuthContext
+  );
 
-  // function SignOut() {
-  //   return (
-  //     auth.currentUser && (
-  //       <NavButton onClick={() => auth.signOut()}>Sign Out</NavButton>
-  //     )
-  //   );
-  // }
+  function SignIn() {
+    return (
+      <>
+        <NavButton className="sign-in" onClick={signInWithGoogle}>
+          Sign in with Google
+        </NavButton>
+      </>
+    );
+  }
 
   const handleJoinGame = (e) => {
     e.preventDefault();
     Router.push(`/play/${matchCode}`);
   };
 
-  const ImageIcon = () => (
-    <ImgIcon>
+  const ImageIcon = ({ onClick }) => (
+    <ImgIcon onClick={onClick}>
       <svg
         aria-hidden="true"
         focusable="false"
@@ -77,25 +62,32 @@ export default function Home() {
   return (
     <Container>
       <Header>
-        <h2>Home</h2>
-        <ImageIcon />
+        {loading ? <h2>Loading</h2> : <h2>Home</h2>}
+
+        {user && <ImageIcon onClick={() => signOutGoogle()} disabled />}
       </Header>
 
-      <Link href="/create">
-        <LinkButton>Create a Game</LinkButton>
-      </Link>
-      <form onSubmit={handleJoinGame}>
-        <JoinGameContainer>
-          <Label>Enter a match code</Label>
-          <Input
-            name="roomCode"
-            placeholder="match code"
-            value={matchCode}
-            onChange={(e) => setMatchCode(e.target.value)}
-          />
-        </JoinGameContainer>
-        <JoinButton type="submit">Join</JoinButton>
-      </form>
+      {user ? (
+        <>
+          <Link href="/create">
+            <LinkButton>Create a Game</LinkButton>
+          </Link>
+          <form onSubmit={handleJoinGame}>
+            <JoinGameContainer>
+              <Label>Enter a match code</Label>
+              <Input
+                name="roomCode"
+                placeholder="match code"
+                value={matchCode}
+                onChange={(e) => setMatchCode(e.target.value)}
+              />
+            </JoinGameContainer>
+            <JoinButton type="submit">Join</JoinButton>
+          </form>
+        </>
+      ) : (
+        <SignIn />
+      )}
     </Container>
   );
 }
