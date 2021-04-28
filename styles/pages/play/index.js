@@ -88,7 +88,7 @@ export const CharItem = styled.button`
   background: ${({ checked }) => (checked ? "#EF494B" : "#22253d")};
 
   width: 8rem;
-  height: 8rem;
+  height: 14rem;
 
   border: 0;
 
