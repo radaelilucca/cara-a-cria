@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import Router from "next/router";
 
@@ -12,45 +12,56 @@ import {
 } from "../../styles/pages/create";
 import CreatableSelect from "react-select/creatable";
 
-import firebase from "firebase/app";
-
-import "firebase/firestore";
-
-import { firebaseConfig } from "../../config/firebase";
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app(); // if already initialized, use that one
-}
-
-const firestore = firebase.firestore();
-
-import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
-
 import Header from "../../src/components/Header";
+import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
+import { AuthContext } from "../../context/auth";
 
 const CreateView = () => {
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    maxPlayers: "",
-    maxCharacters: "",
+    maxPlayers: "2",
+    maxCharacters: "50",
     categories: [],
   });
 
+  const { firestore } = useContext(AuthContext);
+
   const charactersRef = firestore.collection("characters");
+  const matchesRef = firestore.collection("matches");
 
   const [characters] = useCollectionDataOnce(charactersRef);
 
   const handleMatchCreate = async (characters) => {
+    if (!characters) return;
     setLoading(true);
 
-    const matchesRef = firestore.collection("matches");
-    const { maxPlayers, maxCharacters } = formData;
+    const maxCharacters = Number(formData.maxCharacters);
+    const maxPlayers = Number(formData.maxPlayers);
 
-    const chars = characters
-      .sort(() => Math.random() - 0.5)
-      .slice(0, maxCharacters);
+    const shuffleArray = (array) => {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+
+      return array;
+    };
+
+    const totalCharsCount = characters.length - 1;
+    const halfOfTotalChars = totalCharsCount / 2;
+
+    const chars1 = characters.slice(0, halfOfTotalChars);
+    const chars2 = characters.slice(halfOfTotalChars, totalCharsCount + 1);
+
+    const sortedChars1 = shuffleArray(chars1).slice(0, maxCharacters / 2);
+    const sortedChars2 = shuffleArray(chars2).slice(
+      maxCharacters / 2,
+      maxCharacters
+    );
+
+    const chars = [...sortedChars2, ...sortedChars1];
 
     const code = Math.floor(Math.random() * 10000);
 
@@ -66,7 +77,6 @@ const CreateView = () => {
     try {
       matchesRef.doc(`match-${code}`).set(newMatch);
       setLoading(false);
-
       Router.push(`/play/${newMatch.code}`);
     } catch (error) {
       console.error(error);
