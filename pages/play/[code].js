@@ -27,6 +27,8 @@ const GameView = () => {
   const [flippedChars, setFlippedChars] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
+  const [isPlayerTurn, setIsPlayerTurn] = useState(false);
+  const [opponent, setOpponent] = useState(null);
 
   const { user, loading, firestore } = useContext(AuthContext);
 
@@ -80,6 +82,8 @@ const GameView = () => {
               ];
             setPlayerChar(selectedChar);
 
+            const [name] = user.displayName.split(" ");
+
             singleMatchRef.update({
               ...singleMatch,
               players: [
@@ -88,6 +92,7 @@ const GameView = () => {
                   id: user.uid,
                   charId: selectedChar.id,
                   charName: selectedChar.name,
+                  name,
                 },
               ],
             });
@@ -113,6 +118,44 @@ const GameView = () => {
       } else {
         alert("Match not found");
         Router.push("/");
+      }
+    }
+  }, [singleMatch, loadingMatch]);
+
+  useEffect(() => {
+    if (!loadingMatch) {
+      const [name] = user.displayName.split(" ");
+
+      const { uid: id } = user;
+
+      const findOpponent = singleMatch.players.find(
+        (item) => item.id !== user.uid
+      );
+      if (findOpponent) {
+        setOpponent(findOpponent);
+      }
+
+      const userForTurn = {
+        name,
+        id,
+      };
+      if (
+        singleMatch.players.length === singleMatch.maxPlayers &&
+        singleMatch.status === "waiting"
+      ) {
+        singleMatchRef.update({
+          ...singleMatch,
+          status: "in-game",
+          turn: userForTurn,
+        });
+      }
+    }
+  }, [singleMatch, loadingMatch]);
+
+  useEffect(() => {
+    if (!loadingMatch) {
+      if (singleMatch.status === "in-game") {
+        setIsPlayerTurn(singleMatch.turn.id === user.uid);
       }
     }
   }, [singleMatch, loadingMatch]);
@@ -160,6 +203,24 @@ const GameView = () => {
     setModalOpen((prev) => !prev);
   };
 
+  const handleNextTurn = () => {
+    const { name, id } = opponent;
+    singleMatchRef.update({
+      turn: {
+        name,
+        id,
+      },
+    });
+  };
+
+  const getTurnLabel = () => {
+    if (isPlayerTurn) return "Finish turn";
+
+    if (singleMatch?.turn) return `${singleMatch?.turn.name}'s turn...`;
+
+    return "Waiting...";
+  };
+
   useEffect(() => {
     if (!user && !loading) Router.push("/");
   }, [user, loading]);
@@ -196,8 +257,8 @@ const GameView = () => {
       </Header>
 
       <ActionButtons>
-        <button type="button" onClick={() => alert("finish turn")}>
-          Waiting...
+        <button type="button" onClick={handleNextTurn} disabled={!isPlayerTurn}>
+          {getTurnLabel()}
         </button>
         <button type="button" onClick={() => alert("guess")}>
           Make a Guess

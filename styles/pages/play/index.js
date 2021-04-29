@@ -82,6 +82,10 @@ export const ActionButtons = styled.div`
   button {
     background-color: white;
 
+    &:disabled {
+      filter: brightness(0.6);
+    }
+
     width: 46%;
     height: 60%;
 
@@ -176,10 +180,6 @@ export const DetailChar = styled.div`
 
 export const CharItem = styled.button`
   background: #22253d;
-
-  /* background-image: url("https://i.ytimg.com/vi/gpV48sIOBfw/maxresdefault.jpg");
-
-  background-size: cover; */
 
   width: 100%;
   height: 100%;
