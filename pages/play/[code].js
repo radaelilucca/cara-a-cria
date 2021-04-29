@@ -13,6 +13,7 @@ import {
   DetailChar,
   PlayerCharHeader,
   ActionButtons,
+  GuessModalContainer,
 } from "../../styles/pages/play";
 import Header from "../../src/components/Header";
 
@@ -26,6 +27,7 @@ const GameView = () => {
   const [chars, setChars] = useState([]);
   const [flippedChars, setFlippedChars] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [guessModalOpen, setGuessModalOpen] = useState(false);
   const [playerChar, setPlayerChar] = useState(null);
   const [isPlayerTurn, setIsPlayerTurn] = useState(false);
   const [opponent, setOpponent] = useState(null);
@@ -63,6 +65,11 @@ const GameView = () => {
   useEffect(() => {
     if (!loadingMatch) {
       if (singleMatch) {
+        if (singleMatch.status === "finished") {
+          alert("This match is already finished.");
+          Router.push("/");
+          return;
+        }
         let playerCharId;
         if (!playerChar) {
           const { players = [] } = singleMatch;
@@ -221,6 +228,31 @@ const GameView = () => {
     return "Waiting...";
   };
 
+  const handleGuess = (char) => {
+    if (char.id === opponent.charId) {
+      alert("YOU WIN!");
+      const [name] = user.displayName.split(" ");
+      const { uid: id } = user;
+      singleMatchRef.update({
+        ...singleMatch,
+        status: "finished",
+        winner: { name, id },
+      });
+      Router.push("/");
+    } else {
+      alert("YOU LOSE!");
+
+      const { id, name } = opponent;
+      singleMatchRef.update({
+        ...singleMatch,
+        status: "finished",
+        winner: { name, id },
+      });
+
+      Router.push("/");
+    }
+  };
+
   useEffect(() => {
     if (!user && !loading) Router.push("/");
   }, [user, loading]);
@@ -260,7 +292,11 @@ const GameView = () => {
         <button type="button" onClick={handleNextTurn} disabled={!isPlayerTurn}>
           {getTurnLabel()}
         </button>
-        <button type="button" onClick={() => alert("guess")}>
+        <button
+          type="button"
+          disabled={!isPlayerTurn}
+          onClick={() => setGuessModalOpen(true)}
+        >
           Make a Guess
         </button>
       </ActionButtons>
@@ -298,6 +334,30 @@ const GameView = () => {
             <h3>{playerChar.name}</h3>
           </DetailChar>
         )}
+      </Modal>
+
+      <Modal
+        style={customModalStyles}
+        isOpen={playerChar && guessModalOpen}
+        onRequestClose={() => setGuessModalOpen(false)}
+        contentLabel="Make a guess"
+      >
+        <GuessModalContainer>
+          <h2>Choose who's the opponent's character.</h2>
+
+          <ul>
+            {chars.map((char) => {
+              if (!flippedChars.includes(char.id))
+                return (
+                  <li>
+                    <button type="button" onClick={() => handleGuess(char)}>
+                      {char.name}
+                    </button>
+                  </li>
+                );
+            })}
+          </ul>
+        </GuessModalContainer>
       </Modal>
 
       <audio ref={bgAudioRef} src="/assets/bgmusic.mp3" loop />

@@ -227,3 +227,58 @@ export const CharName = styled.h3`
     font-size: 1.2rem;
   }
 `;
+
+export const GuessModalContainer = styled.div`
+  max-height: 60vh;
+  width: 60vw;
+
+  background-color: #13101b;
+  overflow: scroll;
+
+  padding: 1rem;
+  border-radius: 15px;
+
+  h2 {
+    color: white;
+    margin: 0;
+    padding: 0.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+
+  button {
+    flex: 1;
+    width: 80%;
+
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    background: #22253d;
+
+    border: none;
+    border-radius: 14px;
+
+    color: white;
+  }
+`;
