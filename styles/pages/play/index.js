@@ -36,6 +36,7 @@ export const ImgIcon = styled.button`
 export const CharsContainer = styled.div`
   display: grid;
   grid-gap: 0.4rem;
+  position: relative;
 
   padding: 0 0.5rem;
 
@@ -60,6 +61,18 @@ export const CharsContainer = styled.div`
   @media (min-width: 1366px) {
     grid-template-columns: repeat(7, 1fr);
   }
+`;
+
+export const KickButton = styled.button`
+  position: fixed;
+
+  bottom: 2rem;
+  right: 2rem;
+
+  padding: 1rem 3rem;
+
+  border: none;
+  border-radius: 20%;
 `;
 
 export const DetailChar = styled.div`

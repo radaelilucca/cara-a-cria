@@ -12,6 +12,7 @@ import {
   ImgIcon,
   DetailChar,
   PlayerCharHeader,
+  KickButton,
 } from "../../styles/pages/play";
 import Header from "../../src/components/Header";
 
@@ -100,6 +101,8 @@ const GameView = () => {
 
             playerCharId = loadedPlayerChar.id;
           }
+        } else {
+          playerCharId = playerChar.id;
         }
 
         const filteredChars = singleMatch.chars.filter(
@@ -211,6 +214,8 @@ const GameView = () => {
               <CharItem onClick={() => handleFlipChar(char.id)} key={char.id} />
             </ReactCardFlip>
           ))}
+
+        <KickButton onClick={() => alert("kick")}>Kick</KickButton>
       </CharsContainer>
 
       <Modal
