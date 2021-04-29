@@ -60,8 +60,7 @@ const GameView = () => {
   useEffect(() => {
     if (!loadingMatch) {
       if (singleMatch) {
-        setChars(singleMatch.chars);
-
+        let playerCharId;
         if (!playerChar) {
           const { players = [] } = singleMatch;
 
@@ -91,13 +90,23 @@ const GameView = () => {
                 },
               ],
             });
+
+            playerCharId = selectedChar.id;
           } else {
             const loadedPlayerChar = singleMatch.chars.find(
               (item) => item.id === hasChar.charId
             );
             setPlayerChar(loadedPlayerChar);
+
+            playerCharId = loadedPlayerChar.id;
           }
         }
+
+        const filteredChars = singleMatch.chars.filter(
+          (item) => item.id !== playerCharId
+        );
+
+        setChars(filteredChars);
       } else {
         alert("Match not found");
         Router.push("/");
