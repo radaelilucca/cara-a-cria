@@ -12,7 +12,7 @@ import {
   ImgIcon,
   DetailChar,
   PlayerCharHeader,
-  KickButton,
+  ActionButtons,
 } from "../../styles/pages/play";
 import Header from "../../src/components/Header";
 
@@ -195,6 +195,15 @@ const GameView = () => {
         <LogoutIcon />
       </Header>
 
+      <ActionButtons>
+        <button type="button" onClick={() => alert("finish turn")}>
+          Waiting...
+        </button>
+        <button type="button" onClick={() => alert("guess")}>
+          Make a Guess
+        </button>
+      </ActionButtons>
+
       <CharsContainer>
         {chars &&
           chars.map((char) => (
@@ -214,8 +223,6 @@ const GameView = () => {
               <CharItem onClick={() => handleFlipChar(char.id)} key={char.id} />
             </ReactCardFlip>
           ))}
-
-        <KickButton onClick={() => alert("kick")}>Kick</KickButton>
       </CharsContainer>
 
       <Modal

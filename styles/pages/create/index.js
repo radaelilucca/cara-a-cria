@@ -12,11 +12,6 @@ export const Container = styled.div`
   margin-top: 100px;
 `;
 
-export const Group = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const Form = styled.form`
   width: 100%;
   max-width: 440px;
@@ -31,12 +26,27 @@ export const Form = styled.form`
   flex-direction: column;
 
   grid-gap: 1rem;
+
+  @media (min-width: 400px) and (max-width: 813px) {
+    max-height: 230px;
+    padding: 1rem;
+    grid-gap: 0.4em;
+  }
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    max-height: 430px;
+    padding: 1.5rem;
+  }
 `;
 
 export const Label = styled.label`
   color: white;
   font-size: 1.1rem;
   letter-spacing: 1.1px;
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    font-size: 1.3rem;
+  }
 `;
 export const Input = styled.input`
   height: 2rem;
@@ -44,20 +54,42 @@ export const Input = styled.input`
   border: none;
   background-color: #efefef;
 
-  width: 25%;
-  margin-left: auto;
-  margin-right: 1rem;
+  width: 4ch;
 
   font-size: 1.1rem;
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    font-size: 1.3rem;
+  }
+
+  text-align: center;
 
   &:disabled {
     background-color: #333;
   }
 `;
 
+export const FieldSet = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    margin-bottom: 1rem;
+  }
+`;
+
 export const CreateButton = styled.button`
   margin-top: 0.2rem;
   height: 2rem;
+
+  @media (min-width: 400px) and (max-width: 813px) {
+    margin-top: 0.5rem;
+  }
+
+  @media (min-width: 768px) and (min-height: 1024px) {
+    margin-top: 1rem;
+  }
 
   font-size: 1.1rem;
 

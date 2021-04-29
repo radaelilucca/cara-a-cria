@@ -40,8 +40,9 @@ export const CharsContainer = styled.div`
 
   padding: 0 0.5rem;
 
-  margin-top: 100px;
-  margin-bottom: 1rem;
+  margin-top: 80px;
+
+  margin-bottom: 80px;
 
   grid-template-columns: repeat(2, 1fr);
   overflow-y: scroll;
@@ -63,16 +64,56 @@ export const CharsContainer = styled.div`
   }
 `;
 
-export const KickButton = styled.button`
+export const ActionButtons = styled.div`
   position: fixed;
+  bottom: 0;
 
-  bottom: 2rem;
-  right: 2rem;
+  height: 64px;
 
-  padding: 1rem 3rem;
+  background-color: #22154d;
 
-  border: none;
-  border-radius: 20%;
+  z-index: 100;
+
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    background-color: white;
+
+    width: 46%;
+    height: 60%;
+
+    margin: 0;
+    padding: 0;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    color: black;
+
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 500px) {
+    background: transparent;
+
+    margin-right: 3rem;
+    bottom: 0.5rem;
+    justify-content: flex-end;
+
+    button {
+      font-size: 1.3rem;
+      width: 25%;
+      padding: 1rem 1rem;
+      height: 64px;
+
+      &:last-child {
+        margin-left: 0.6rem;
+      }
+    }
+  }
 `;
 
 export const DetailChar = styled.div`

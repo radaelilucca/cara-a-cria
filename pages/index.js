@@ -69,11 +69,11 @@ export default function Home() {
 
       {user ? (
         <>
-          <Link href="/create">
-            <LinkButton>Create a Game</LinkButton>
-          </Link>
           <form onSubmit={handleJoinGame}>
             <JoinGameContainer>
+              <Link href="/create">
+                <LinkButton>Create a Game</LinkButton>
+              </Link>
               <section>
                 <label>Enter a match code</label>
                 <input

@@ -8,7 +8,7 @@ import {
   Label,
   Input,
   CreateButton,
-  Group,
+  FieldSet,
 } from "../../styles/pages/create";
 import CreatableSelect from "react-select/creatable";
 
@@ -103,26 +103,23 @@ const CreateView = () => {
         <h2 style={{ color: "white" }}>Loading...</h2>
       ) : (
         <Form onSubmit={handleSubmit}>
-          <Group>
-            <Group>
-              <Label>Players</Label>
-              <Input
-                name="maxPlayers"
-                value={formData.maxPlayers}
-                onChange={handleFormChange}
-              />
-            </Group>
-            <Group>
-              <Label>Max. Characters</Label>
-              <Input
-                name="maxCharacters"
-                value={formData.maxCharacters}
-                onChange={handleFormChange}
-                min={20}
-              />
-            </Group>
-          </Group>
+          <FieldSet>
+            <Label>Players</Label>
+            <Input
+              name="maxPlayers"
+              value={formData.maxPlayers}
+              onChange={handleFormChange}
+            />
+          </FieldSet>
 
+          <FieldSet>
+            <Label>Max. Characters</Label>
+            <Input
+              name="maxCharacters"
+              value={formData.maxCharacters}
+              onChange={handleFormChange}
+            />
+          </FieldSet>
           <Label>Custom Decks</Label>
           <CreatableSelect />
           <CreateButton type="submit">Create</CreateButton>
