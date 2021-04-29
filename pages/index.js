@@ -74,15 +74,19 @@ export default function Home() {
           </Link>
           <form onSubmit={handleJoinGame}>
             <JoinGameContainer>
-              <Label>Enter a match code</Label>
-              <Input
-                name="roomCode"
-                placeholder="match code"
-                value={matchCode}
-                onChange={(e) => setMatchCode(e.target.value)}
-              />
+              <section>
+                <label>Enter a match code</label>
+                <input
+                  name="roomCode"
+                  placeholder="code"
+                  value={matchCode}
+                  onChange={(e) => setMatchCode(e.target.value)}
+                />
+              </section>
+              <JoinButton type="submit" disabled={matchCode.length < 4}>
+                Join
+              </JoinButton>
             </JoinGameContainer>
-            <JoinButton type="submit">Join</JoinButton>
           </form>
         </>
       ) : (

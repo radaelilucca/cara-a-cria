@@ -9,11 +9,13 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 `;
+export const PlayerCharHeader = styled.div`
+  display: flex;
+`;
 
 export const ImgIcon = styled.button`
   all: unset;
-  margin-left: auto;
-
+  margin-left: 1.2rem;
   svg {
     height: 1.5rem;
     width: 1.5rem;
@@ -33,34 +35,30 @@ export const ImgIcon = styled.button`
 
 export const CharsContainer = styled.div`
   display: grid;
-  grid-gap: 0.2rem;
+  grid-gap: 0.4rem;
 
-  padding: 0 0.2rem;
+  padding: 0 0.5rem;
 
   margin-top: 100px;
   margin-bottom: 1rem;
 
   grid-template-columns: repeat(2, 1fr);
-  overflow: scroll;
+  overflow-y: scroll;
 
   @media (min-width: 500px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.2rem;
   }
 
   @media (min-width: 764px) {
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1.3rem;
   }
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 1.5rem;
   }
 
   @media (min-width: 1366px) {
     grid-template-columns: repeat(7, 1fr);
-    grid-gap: 1.6rem;
   }
 `;
 
@@ -72,7 +70,7 @@ export const DetailChar = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 0.8rem;
+  padding: 1rem;
 
   border-radius: 16px;
   border: 0;
@@ -83,9 +81,25 @@ export const DetailChar = styled.div`
     height: 280px;
   }
 
-  @media (min-height: 500px) {
+  @media (min-height: 500px) and (min-width: 764px) {
+    padding: 1.5rem;
+
     img {
       height: 380px;
+    }
+  }
+
+  @media (min-height: 500px) and (min-width: 1024px) {
+    img {
+      height: 450px;
+    }
+  }
+
+  @media (min-height: 500px) and (min-width: 1366px) {
+    padding: 2rem;
+
+    img {
+      height: 540px;
     }
   }
 
@@ -109,8 +123,12 @@ export const DetailChar = styled.div`
 export const CharItem = styled.button`
   background: #22253d;
 
+  /* background-image: url("https://i.ytimg.com/vi/gpV48sIOBfw/maxresdefault.jpg");
+
+  background-size: cover; */
+
   width: 100%;
-  height: 16rem;
+  height: 100%;
 
   border: 0;
 
@@ -121,37 +139,15 @@ export const CharItem = styled.button`
 
   overflow: hidden;
 
-  padding: 1rem;
+  padding: 1.2rem;
 
   border-radius: 16px;
-
-  @media (min-width: 764px) {
-    width: 10rem;
-    height: 16rem;
-  }
-
-  @media (min-width: 1366px) {
-    max-width: 12rem;
-    height: 18rem;
-  }
 `;
 
 export const CharImg = styled.img`
   border-radius: 16px;
-  height: 86%;
-
-  @media (min-width: 500px) {
-    height: 155px;
-    max-width: 140px;
-  }
-
-  @media (min-width: 764px) {
-    height: 185px;
-  }
-
-  @media (min-width: 1366px) {
-    height: 185px;
-  }
+  height: 90%;
+  max-width: 90%;
 `;
 
 export const CharName = styled.h3`
@@ -165,7 +161,7 @@ export const CharName = styled.h3`
 
   font-size: 1rem;
 
-  margin-top: 0.4rem;
+  margin-top: 1rem;
 
   min-height: 2.5rem;
 

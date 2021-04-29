@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
-  width: 50vw;
+  width: 100vw;
 
   padding: 2rem;
 
@@ -49,25 +49,11 @@ export const NavButton = styled.button`
 `;
 
 export const LinkButton = styled.button`
-  height: 84px;
-  width: 320px;
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 
-  background-color: #22253d;
-
-  border: none;
-  color: white;
-
-  border-radius: 15px;
-`;
-
-export const JoinButton = styled.button`
-  height: 84px;
-  min-width: 320px;
-
-  margin-top: 1rem;
-  font-size: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
 
   background-color: #22253d;
 
@@ -78,9 +64,45 @@ export const JoinButton = styled.button`
 `;
 
 export const JoinGameContainer = styled.div`
-  min-width: 320px;
+  width: 100%;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
+  section {
+    display: flex;
+
+    label {
+      color: white;
+      width: 70%;
+
+      font-size: 1.2rem;
+    }
+    input {
+      width: 25%;
+      font-size: 1.2rem;
+
+      text-align: center;
+    }
+  }
+`;
+
+export const JoinButton = styled.button`
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  padding: 0.8rem;
+  width: 100%;
+
+  align-self: center;
+
+  background-color: #22253d;
+
+  border: none;
+  color: white;
+
+  border-radius: 15px;
+
+  &:disabled {
+    filter: brightness(0.7);
+  }
 `;

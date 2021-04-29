@@ -9,8 +9,8 @@ export const HeaderContainer = styled.div`
   border-bottom-right-radius: 25px;
 
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: space-between;
 
   padding: 2.2rem 2rem;
 
@@ -18,9 +18,8 @@ export const HeaderContainer = styled.div`
   top: 0;
   z-index: 99;
 
-  h2,
-  span {
-    font-size: 1.15rem;
+  h2 {
+    font-size: 1.25rem;
     color: black;
 
     font-family: "Roboto";
