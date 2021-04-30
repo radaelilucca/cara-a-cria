@@ -30,6 +30,7 @@ export const Form = styled.form`
 export const Label = styled.label`
   color: white;
 
+  margin-top: 1rem;
   margin-bottom: 0.4rem;
 
   font-size: 1.2rem;
