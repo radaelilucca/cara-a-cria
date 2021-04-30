@@ -52,7 +52,8 @@ const EditView = () => {
 
   const handleSelectChange = async (newValue) => {
     const anime = {
-      ...newValue,
+      value: newValue.value.replace(/([\s])/g, "_"),
+      label: newValue.label.replace(/([\s])/g, "_"),
       id: uuid(),
     };
 
@@ -61,13 +62,11 @@ const EditView = () => {
       anime,
     }));
 
-    if (animes.find((item) => item.value === anime.value)) {
-      return;
+    if (!animes.find((item) => item.value === anime.value)) {
+      const { label, value, id } = anime;
+
+      animesRef.doc(anime.label).set({ label, value, id });
     }
-
-    const { label, value, id } = anime;
-
-    animesRef.doc(anime.label).set({ label, value, id });
   };
 
   const handleInputChange = (e) => {
@@ -86,6 +85,8 @@ const EditView = () => {
       currentCharRef.update({
         ...formData,
       });
+
+      console.log("UPDATE DATA ->", { ...formData });
 
       setCurrentIndex((prevIndex) => prevIndex + 1);
       setFormData({});
