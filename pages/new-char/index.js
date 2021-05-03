@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 import {
   Container,
@@ -8,12 +8,10 @@ import {
   CreateButton,
 } from "../../styles/pages/new-char";
 
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
-import "firebase/analytics";
-
-import { useCollectionDataOnce } from "react-firebase-hooks/firestore";
+import {
+  useCollectionData,
+  useCollectionDataOnce,
+} from "react-firebase-hooks/firestore";
 
 import CreatableSelect from "react-select/creatable";
 
@@ -21,64 +19,45 @@ import Header from "../../src/components/Header";
 import uuid from "react-uuid";
 
 import jsonChars from "../../anime-chars.json";
-
-var firebaseConfig = {
-  apiKey: "AIzaSyBlzLd5oIftzTctFxmoz_C1tblgsPh1epw",
-  authDomain: "cara-a-cria.firebaseapp.com",
-  projectId: "cara-a-cria",
-  storageBucket: "cara-a-cria.appspot.com",
-  messagingSenderId: "45440690874",
-  appId: "1:45440690874:web:5e3f1937bd1fc7a8767083",
-};
-
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();
-}
+import { AuthContext } from "../../context/auth";
 
 const CreateView = () => {
-  const firestore = firebase.firestore();
+  const { firestore } = useContext(AuthContext);
 
   const [formData, setFormData] = useState({
     name: "",
     imageSrc: "",
-    categories: [],
   });
+
+  const animesRef = firestore.collection("animes");
+  const [animes] = useCollectionData(animesRef);
 
   const categoriesRef = firestore.collection("categories");
   const query = categoriesRef;
 
   const [categories] = useCollectionDataOnce(query);
 
-  const charactersRef = firestore.collection("characters");
+  const charactersRef = firestore.collection("charactersV2");
 
   const [characters] = useCollectionDataOnce(charactersRef);
 
   const handleSelectChange = async (newValue) => {
-    const parsedCategories = newValue.map((item) => ({
-      ...item,
+    const anime = {
+      value: newValue?.value?.replace(/([\s])/g, "_"),
+      label: newValue?.label?.replace(/([\s])/g, "_"),
       id: uuid(),
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-    }));
-
-    const newCategory = parsedCategories[parsedCategories.length - 1];
+    };
 
     setFormData((prev) => ({
       ...prev,
-      categories: parsedCategories,
+      anime,
     }));
 
-    if (
-      !newCategory ||
-      categories.find((item) => item.value === newCategory.value)
-    ) {
-      return;
+    if (!animes.find((item) => item.value === anime.value)) {
+      const { label, value, id } = anime;
+
+      animesRef.doc(anime.label).set({ label, value, id });
     }
-
-    const { label, value, id, createdAt } = newCategory;
-
-    await categoriesRef({ label, value, id, createdAt });
   };
 
   const handleInputChange = (e) => {
@@ -99,18 +78,21 @@ const CreateView = () => {
         throw new Error("This char already exists");
       }
 
-      await charactersRef.add({
+      const newChar = {
         id: uuid(),
         name: formData.name,
         imageSrc: formData.imageSrc,
-        categories: formData.categories.map((item) => item.id),
-        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      });
+        anime: formData.anime,
+      };
+
+      await charactersRef
+        .doc(`char-${formData.name.toUpperCase()}`)
+        .set(newChar);
 
       setFormData({
         name: "",
         imageSrc: "",
-        categories: [],
+        anime: "",
       });
 
       if (nameInputRef.current) {
@@ -121,38 +103,37 @@ const CreateView = () => {
       setFormData({
         name: "",
         imageSrc: "",
-        categories: [],
+        anime: "",
       });
     }
   };
 
   const nameInputRef = useRef(null);
 
-  const handleImportFromJson = async () => {
-    const { chars } = jsonChars;
+  // const handleImportFromJson = async () => {
+  //   const { chars } = jsonChars;
 
-    chars.forEach(async (char) => {
-      const exists = characters?.find(
-        (item) => item.name?.toLowerCase() === char.name?.toLowerCase()
-      );
+  //   chars.forEach(async (char) => {
+  //     const exists = characters?.find(
+  //       (item) => item.name?.toLowerCase() === char.name?.toLowerCase()
+  //     );
 
-      if (!exists) {
-        try {
-          await charactersRef.add({
-            id: uuid(),
-            name: char.name,
-            imageSrc: char.imgSrc,
-            categories: [],
-            createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-          });
-        } catch (error) {
-          console.log(`Error creating -> ${char.name}`);
-        }
-      }
-    });
+  //     if (!exists) {
+  //       try {
+  //         await charactersRef.add({
+  //           id: uuid(),
+  //           name: char.name,
+  //           imageSrc: char.imgSrc,
+  //           categories: [],
+  //         });
+  //       } catch (error) {
+  //         console.log(`Error creating -> ${char.name}`);
+  //       }
+  //     }
+  //   });
 
-    alert("Chars imported successfully");
-  };
+  //   alert("Chars imported successfully");
+  // };
 
   return (
     <Container>
@@ -183,18 +164,17 @@ const CreateView = () => {
           autoComplete={false}
         />
 
-        <Label>Categories</Label>
+        <Label>Anime</Label>
         <CreatableSelect
           options={categories}
-          isMulti
           onChange={handleSelectChange}
-          value={formData.categories}
+          value={formData.anime || null}
         />
         <CreateButton type="submit">Create</CreateButton>
 
-        <CreateButton type="button" onClick={handleImportFromJson} disabled>
+        {/* <CreateButton type="button" onClick={handleImportFromJson} disabled>
           Import From Json
-        </CreateButton>
+        </CreateButton> */}
       </Form>
     </Container>
   );
