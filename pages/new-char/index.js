@@ -83,6 +83,7 @@ const CreateView = () => {
         name: formData.name,
         imageSrc: formData.imageSrc,
         anime: formData.anime,
+        power: formData.power,
       };
 
       await charactersRef
@@ -169,6 +170,15 @@ const CreateView = () => {
           options={animes}
           onChange={handleSelectChange}
           value={formData.anime || null}
+        />
+
+        <Label>Power</Label>
+        <Input
+          type="number"
+          name="power"
+          onChange={handleInputChange}
+          value={formData.power || ""}
+          autoComplete={false}
         />
         <CreateButton type="submit">Create</CreateButton>
 
