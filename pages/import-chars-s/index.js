@@ -44,10 +44,7 @@ const CharsView = ({ charsList }) => {
 
   const handleImportChar = (e) => {
     e.preventDefault();
-
-
-    const parsedChar = 
-  }
+  };
 
   return (
     <CharsContainer>
@@ -109,8 +106,6 @@ const EditView = () => {
     if (!animeId) return;
 
     const result = await api.get(`/anime/${animeId}/characters_staff`);
-
-    console.log(result.data.characters);
 
     setChars(result.data.characters);
   };
