@@ -166,7 +166,7 @@ const CreateView = () => {
 
         <Label>Anime</Label>
         <CreatableSelect
-          options={categories}
+          options={animes}
           onChange={handleSelectChange}
           value={formData.anime || null}
         />
