@@ -53,7 +53,7 @@ const EditView = () => {
   const handleSelectChange = async (newValue) => {
     const anime = {
       value: newValue.value.replace(/([\s])/g, "_"),
-      label: newValue.label.replace(/([\s])/g, "_"),
+      label: newValue.label,
       id: uuid(),
     };
 
